@@ -1,0 +1,6 @@
+(library
+ (name codicons)
+ (public_name codicons)
+ (libraries core virtual_dom)
+ (preprocess
+  (pps ppx_jane)))
