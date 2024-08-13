@@ -12,8 +12,8 @@ let name t =
   |> Sexp.to_string
   |> String.lowercase
   |> String.map ~f:(function
-       | '_' -> '-'
-       | c -> c)
+    | '_' -> '-'
+    | c -> c)
 ;;
 
 let svg ?size ?color ?(extra_attrs = []) icon =
@@ -45,10 +45,10 @@ let svg ?size ?color ?(extra_attrs = []) icon =
   let attr =
     Vdom.Attr.(
       many
-        [ string_property "width" size
-        ; string_property "height" size
-        ; string_property "viewBox" view_box
-        ; string_property "fill" (Css_gen.Color.to_string_css color)
+        [ create "width" size
+        ; create "height" size
+        ; create "viewBox" view_box
+        ; create "fill" (Css_gen.Color.to_string_css color)
         ; (* When using an icon inside a flexbox container, you almost certainly
              want this so that the icon is not squished. *)
           Vdom.Attr.style (Css_gen.create ~field:"flex-shrink" ~value:"0")

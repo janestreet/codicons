@@ -1,6 +1,6 @@
 (library
  (name codicons)
  (public_name codicons)
- (libraries core virtual_dom)
+ (libraries core virtual_dom.css_gen virtual_dom)
  (preprocess
   (pps ppx_jane)))
