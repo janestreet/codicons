@@ -5,8 +5,13 @@
 from subprocess import run
 from os import listdir
 from sys import argv
+from shutil import copyfile
+
 
 run(["git", "clone", "https://github.com/microsoft/vscode-codicons.git", "./repo"])
+
+for icon in listdir("../custom"):
+    copyfile(f"../custom/{icon}", f"./repo/src/icons/{icon}")
 
 icons = [icon for icon in listdir("./repo/src/icons") if icon.endswith(".svg")]
 icons.sort()

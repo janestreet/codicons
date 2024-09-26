@@ -129,6 +129,7 @@ type t =
   | Edit
   | Editor_layout
   | Ellipsis
+  | Emacs
   | Empty_window
   | Error_small
   | Error
@@ -1444,6 +1445,13 @@ let svg = function
   | Ellipsis ->
     "<path d=\"M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 0a1 \
      1 0 1 1-2 0 1 1 0 0 1 2 0z\"/>"
+  | Emacs ->
+    "\n\
+     <path d=\"M10 2.5C9.2 2.5 7.66667 2.66667 7 3C7 3 10.5508 2.75935 9 4C8.21913 \
+     4.6247 4 3.5 4 5C4 6.2 6.66667 7.5 8 8C6.5 7.66667 3.4 7.6 3 10C2.6 12.4 7.5 \
+     12.3333 10 12C9.6 13.2 6.5 13.8333 5 14C7.16667 14 11.6 13.6 12 12C12.5 10 5.5 12 \
+     5.5 10C5.5 8 13.5 8.5 10.5 8C7.5 7.5 6.5 5 7 5C7.5 5 9.5 5.5 11 4C11.5 3.5 11 2.5 \
+     10 2.5Z\" />\n\n"
   | Empty_window ->
     "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 \
      4h3v1H4v3H3V5H0V4h3V1h1v3zM1 \
@@ -4484,6 +4492,7 @@ let frame = function
   | Edit
   | Editor_layout
   | Ellipsis
+  | Emacs
   | Empty_window
   | Error_small
   | Error
