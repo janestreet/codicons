@@ -39,8 +39,8 @@ def varname(name):
     return name.replace("-", "_").capitalize()
 
 
-def escape(svg):
-    return svg.replace('"', '\\"')
+def escape(svg: str) -> str:
+    return svg.replace("\n", "").replace('"', '\\"').strip()
 
 
 type_def = """type t =
