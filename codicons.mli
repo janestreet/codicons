@@ -11,3 +11,7 @@ val svg
 
 val name : t -> string
 val all : t list
+
+(** Convert a [Codicon] to a [Byo_icon]. This can be helpful if you want to use a Codicon
+    with a library that accepts arbitrary icon sets. See [Byo_icon] for more details. *)
+val to_byo_icon : t -> Byo_icon.t

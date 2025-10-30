@@ -43,6 +43,9 @@ module T = struct
     | Call_incoming
     | Call_outgoing
     | Case_sensitive
+    | Chat_sparkle_error
+    | Chat_sparkle_warning
+    | Chat_sparkle
     | Check_all
     | Check
     | Checklist
@@ -74,8 +77,10 @@ module T = struct
     | Code
     | Coffee
     | Collapse_all
+    | Collection
     | Color_mode
     | Combine
+    | Comment_discussion_sparkle
     | Comment_discussion
     | Comment_draft
     | Comment_unresolved
@@ -84,7 +89,11 @@ module T = struct
     | Compass_dot
     | Compass
     | Copilot_blocked
+    | Copilot_error
+    | Copilot_in_progress
     | Copilot_not_connected
+    | Copilot_snooze
+    | Copilot_success
     | Copilot_unavailable
     | Copilot_warning
     | Copilot
@@ -135,6 +144,7 @@ module T = struct
     | Diff
     | Discard
     | Edit_session
+    | Edit_sparkle
     | Edit
     | Editor_layout
     | Ellipsis
@@ -144,6 +154,7 @@ module T = struct
     | Exclude
     | Expand_all
     | Export
+    | Extensions
     | Eye_closed
     | Eye
     | Feedback
@@ -178,6 +189,7 @@ module T = struct
     | Git_merge
     | Git_pull_request_closed
     | Git_pull_request_create
+    | Git_pull_request_done
     | Git_pull_request_draft
     | Git_pull_request_go_to_changes
     | Git_pull_request_new_changes
@@ -217,6 +229,8 @@ module T = struct
     | Jersey
     | Json
     | Key
+    | Keyboard_tab_above
+    | Keyboard_tab_below
     | Keyboard_tab
     | Law
     | Layers_active
@@ -227,13 +241,16 @@ module T = struct
     | Layout_centered
     | Layout_menubar
     | Layout_panel_center
+    | Layout_panel_dock
     | Layout_panel_justify
     | Layout_panel_left
     | Layout_panel_off
     | Layout_panel_right
     | Layout_panel
+    | Layout_sidebar_left_dock
     | Layout_sidebar_left_off
     | Layout_sidebar_left
+    | Layout_sidebar_right_dock
     | Layout_sidebar_right_off
     | Layout_sidebar_right
     | Layout_statusbar
@@ -276,6 +293,7 @@ module T = struct
     | Multiple_windows
     | Music
     | Mute
+    | New_collection
     | New_file
     | New_folder
     | Newline
@@ -348,11 +366,14 @@ module T = struct
     | Screen_full
     | Screen_normal
     | Search_fuzzy
+    | Search_sparkle
     | Search_stop
+    | Send_to_remote_agent
     | Send
     | Server_environment
     | Server_process
     | Server
+    | Settings_gear
     | Settings
     | Share
     | Shield
@@ -412,6 +433,7 @@ module T = struct
     | Terminal_tmux
     | Terminal_ubuntu
     | Text_size
+    | Thinking
     | Three_bars
     | Thumbsdown_filled
     | Thumbsdown
@@ -459,7 +481,7 @@ module T = struct
     | Debug_alt
     | Debug_console
     | Debug
-    | Extensions
+    | Extensions_large
     | Files
     | Github_alt
     | Github
@@ -468,7 +490,6 @@ module T = struct
     | References
     | Remote_explorer
     | Search
-    | Settings_gear
     | Source_control
     | Terminal
 
@@ -514,6 +535,9 @@ module T = struct
     ; Call_incoming
     ; Call_outgoing
     ; Case_sensitive
+    ; Chat_sparkle_error
+    ; Chat_sparkle_warning
+    ; Chat_sparkle
     ; Check_all
     ; Check
     ; Checklist
@@ -545,8 +569,10 @@ module T = struct
     ; Code
     ; Coffee
     ; Collapse_all
+    ; Collection
     ; Color_mode
     ; Combine
+    ; Comment_discussion_sparkle
     ; Comment_discussion
     ; Comment_draft
     ; Comment_unresolved
@@ -555,7 +581,11 @@ module T = struct
     ; Compass_dot
     ; Compass
     ; Copilot_blocked
+    ; Copilot_error
+    ; Copilot_in_progress
     ; Copilot_not_connected
+    ; Copilot_snooze
+    ; Copilot_success
     ; Copilot_unavailable
     ; Copilot_warning
     ; Copilot
@@ -606,6 +636,7 @@ module T = struct
     ; Diff
     ; Discard
     ; Edit_session
+    ; Edit_sparkle
     ; Edit
     ; Editor_layout
     ; Ellipsis
@@ -615,6 +646,7 @@ module T = struct
     ; Exclude
     ; Expand_all
     ; Export
+    ; Extensions
     ; Eye_closed
     ; Eye
     ; Feedback
@@ -649,6 +681,7 @@ module T = struct
     ; Git_merge
     ; Git_pull_request_closed
     ; Git_pull_request_create
+    ; Git_pull_request_done
     ; Git_pull_request_draft
     ; Git_pull_request_go_to_changes
     ; Git_pull_request_new_changes
@@ -688,6 +721,8 @@ module T = struct
     ; Jersey
     ; Json
     ; Key
+    ; Keyboard_tab_above
+    ; Keyboard_tab_below
     ; Keyboard_tab
     ; Law
     ; Layers_active
@@ -698,13 +733,16 @@ module T = struct
     ; Layout_centered
     ; Layout_menubar
     ; Layout_panel_center
+    ; Layout_panel_dock
     ; Layout_panel_justify
     ; Layout_panel_left
     ; Layout_panel_off
     ; Layout_panel_right
     ; Layout_panel
+    ; Layout_sidebar_left_dock
     ; Layout_sidebar_left_off
     ; Layout_sidebar_left
+    ; Layout_sidebar_right_dock
     ; Layout_sidebar_right_off
     ; Layout_sidebar_right
     ; Layout_statusbar
@@ -747,6 +785,7 @@ module T = struct
     ; Multiple_windows
     ; Music
     ; Mute
+    ; New_collection
     ; New_file
     ; New_folder
     ; Newline
@@ -819,11 +858,14 @@ module T = struct
     ; Screen_full
     ; Screen_normal
     ; Search_fuzzy
+    ; Search_sparkle
     ; Search_stop
+    ; Send_to_remote_agent
     ; Send
     ; Server_environment
     ; Server_process
     ; Server
+    ; Settings_gear
     ; Settings
     ; Share
     ; Shield
@@ -883,6 +925,7 @@ module T = struct
     ; Terminal_tmux
     ; Terminal_ubuntu
     ; Text_size
+    ; Thinking
     ; Three_bars
     ; Thumbsdown_filled
     ; Thumbsdown
@@ -930,7 +973,7 @@ module T = struct
     ; Debug_alt
     ; Debug_console
     ; Debug
-    ; Extensions
+    ; Extensions_large
     ; Files
     ; Github_alt
     ; Github
@@ -939,7 +982,6 @@ module T = struct
     ; References
     ; Remote_explorer
     ; Search
-    ; Settings_gear
     ; Source_control
     ; Terminal
     ]
@@ -987,6 +1029,9 @@ module T = struct
     | Call_incoming -> Core.Sexp.Atom "Call_incoming"
     | Call_outgoing -> Core.Sexp.Atom "Call_outgoing"
     | Case_sensitive -> Core.Sexp.Atom "Case_sensitive"
+    | Chat_sparkle_error -> Core.Sexp.Atom "Chat_sparkle_error"
+    | Chat_sparkle_warning -> Core.Sexp.Atom "Chat_sparkle_warning"
+    | Chat_sparkle -> Core.Sexp.Atom "Chat_sparkle"
     | Check_all -> Core.Sexp.Atom "Check_all"
     | Check -> Core.Sexp.Atom "Check"
     | Checklist -> Core.Sexp.Atom "Checklist"
@@ -1018,8 +1063,10 @@ module T = struct
     | Code -> Core.Sexp.Atom "Code"
     | Coffee -> Core.Sexp.Atom "Coffee"
     | Collapse_all -> Core.Sexp.Atom "Collapse_all"
+    | Collection -> Core.Sexp.Atom "Collection"
     | Color_mode -> Core.Sexp.Atom "Color_mode"
     | Combine -> Core.Sexp.Atom "Combine"
+    | Comment_discussion_sparkle -> Core.Sexp.Atom "Comment_discussion_sparkle"
     | Comment_discussion -> Core.Sexp.Atom "Comment_discussion"
     | Comment_draft -> Core.Sexp.Atom "Comment_draft"
     | Comment_unresolved -> Core.Sexp.Atom "Comment_unresolved"
@@ -1028,7 +1075,11 @@ module T = struct
     | Compass_dot -> Core.Sexp.Atom "Compass_dot"
     | Compass -> Core.Sexp.Atom "Compass"
     | Copilot_blocked -> Core.Sexp.Atom "Copilot_blocked"
+    | Copilot_error -> Core.Sexp.Atom "Copilot_error"
+    | Copilot_in_progress -> Core.Sexp.Atom "Copilot_in_progress"
     | Copilot_not_connected -> Core.Sexp.Atom "Copilot_not_connected"
+    | Copilot_snooze -> Core.Sexp.Atom "Copilot_snooze"
+    | Copilot_success -> Core.Sexp.Atom "Copilot_success"
     | Copilot_unavailable -> Core.Sexp.Atom "Copilot_unavailable"
     | Copilot_warning -> Core.Sexp.Atom "Copilot_warning"
     | Copilot -> Core.Sexp.Atom "Copilot"
@@ -1082,6 +1133,7 @@ module T = struct
     | Diff -> Core.Sexp.Atom "Diff"
     | Discard -> Core.Sexp.Atom "Discard"
     | Edit_session -> Core.Sexp.Atom "Edit_session"
+    | Edit_sparkle -> Core.Sexp.Atom "Edit_sparkle"
     | Edit -> Core.Sexp.Atom "Edit"
     | Editor_layout -> Core.Sexp.Atom "Editor_layout"
     | Ellipsis -> Core.Sexp.Atom "Ellipsis"
@@ -1091,6 +1143,7 @@ module T = struct
     | Exclude -> Core.Sexp.Atom "Exclude"
     | Expand_all -> Core.Sexp.Atom "Expand_all"
     | Export -> Core.Sexp.Atom "Export"
+    | Extensions -> Core.Sexp.Atom "Extensions"
     | Eye_closed -> Core.Sexp.Atom "Eye_closed"
     | Eye -> Core.Sexp.Atom "Eye"
     | Feedback -> Core.Sexp.Atom "Feedback"
@@ -1125,6 +1178,7 @@ module T = struct
     | Git_merge -> Core.Sexp.Atom "Git_merge"
     | Git_pull_request_closed -> Core.Sexp.Atom "Git_pull_request_closed"
     | Git_pull_request_create -> Core.Sexp.Atom "Git_pull_request_create"
+    | Git_pull_request_done -> Core.Sexp.Atom "Git_pull_request_done"
     | Git_pull_request_draft -> Core.Sexp.Atom "Git_pull_request_draft"
     | Git_pull_request_go_to_changes -> Core.Sexp.Atom "Git_pull_request_go_to_changes"
     | Git_pull_request_new_changes -> Core.Sexp.Atom "Git_pull_request_new_changes"
@@ -1164,6 +1218,8 @@ module T = struct
     | Jersey -> Core.Sexp.Atom "Jersey"
     | Json -> Core.Sexp.Atom "Json"
     | Key -> Core.Sexp.Atom "Key"
+    | Keyboard_tab_above -> Core.Sexp.Atom "Keyboard_tab_above"
+    | Keyboard_tab_below -> Core.Sexp.Atom "Keyboard_tab_below"
     | Keyboard_tab -> Core.Sexp.Atom "Keyboard_tab"
     | Law -> Core.Sexp.Atom "Law"
     | Layers_active -> Core.Sexp.Atom "Layers_active"
@@ -1174,13 +1230,16 @@ module T = struct
     | Layout_centered -> Core.Sexp.Atom "Layout_centered"
     | Layout_menubar -> Core.Sexp.Atom "Layout_menubar"
     | Layout_panel_center -> Core.Sexp.Atom "Layout_panel_center"
+    | Layout_panel_dock -> Core.Sexp.Atom "Layout_panel_dock"
     | Layout_panel_justify -> Core.Sexp.Atom "Layout_panel_justify"
     | Layout_panel_left -> Core.Sexp.Atom "Layout_panel_left"
     | Layout_panel_off -> Core.Sexp.Atom "Layout_panel_off"
     | Layout_panel_right -> Core.Sexp.Atom "Layout_panel_right"
     | Layout_panel -> Core.Sexp.Atom "Layout_panel"
+    | Layout_sidebar_left_dock -> Core.Sexp.Atom "Layout_sidebar_left_dock"
     | Layout_sidebar_left_off -> Core.Sexp.Atom "Layout_sidebar_left_off"
     | Layout_sidebar_left -> Core.Sexp.Atom "Layout_sidebar_left"
+    | Layout_sidebar_right_dock -> Core.Sexp.Atom "Layout_sidebar_right_dock"
     | Layout_sidebar_right_off -> Core.Sexp.Atom "Layout_sidebar_right_off"
     | Layout_sidebar_right -> Core.Sexp.Atom "Layout_sidebar_right"
     | Layout_statusbar -> Core.Sexp.Atom "Layout_statusbar"
@@ -1223,6 +1282,7 @@ module T = struct
     | Multiple_windows -> Core.Sexp.Atom "Multiple_windows"
     | Music -> Core.Sexp.Atom "Music"
     | Mute -> Core.Sexp.Atom "Mute"
+    | New_collection -> Core.Sexp.Atom "New_collection"
     | New_file -> Core.Sexp.Atom "New_file"
     | New_folder -> Core.Sexp.Atom "New_folder"
     | Newline -> Core.Sexp.Atom "Newline"
@@ -1295,11 +1355,14 @@ module T = struct
     | Screen_full -> Core.Sexp.Atom "Screen_full"
     | Screen_normal -> Core.Sexp.Atom "Screen_normal"
     | Search_fuzzy -> Core.Sexp.Atom "Search_fuzzy"
+    | Search_sparkle -> Core.Sexp.Atom "Search_sparkle"
     | Search_stop -> Core.Sexp.Atom "Search_stop"
+    | Send_to_remote_agent -> Core.Sexp.Atom "Send_to_remote_agent"
     | Send -> Core.Sexp.Atom "Send"
     | Server_environment -> Core.Sexp.Atom "Server_environment"
     | Server_process -> Core.Sexp.Atom "Server_process"
     | Server -> Core.Sexp.Atom "Server"
+    | Settings_gear -> Core.Sexp.Atom "Settings_gear"
     | Settings -> Core.Sexp.Atom "Settings"
     | Share -> Core.Sexp.Atom "Share"
     | Shield -> Core.Sexp.Atom "Shield"
@@ -1359,6 +1422,7 @@ module T = struct
     | Terminal_tmux -> Core.Sexp.Atom "Terminal_tmux"
     | Terminal_ubuntu -> Core.Sexp.Atom "Terminal_ubuntu"
     | Text_size -> Core.Sexp.Atom "Text_size"
+    | Thinking -> Core.Sexp.Atom "Thinking"
     | Three_bars -> Core.Sexp.Atom "Three_bars"
     | Thumbsdown_filled -> Core.Sexp.Atom "Thumbsdown_filled"
     | Thumbsdown -> Core.Sexp.Atom "Thumbsdown"
@@ -1406,7 +1470,7 @@ module T = struct
     | Debug_alt -> Core.Sexp.Atom "Debug_alt"
     | Debug_console -> Core.Sexp.Atom "Debug_console"
     | Debug -> Core.Sexp.Atom "Debug"
-    | Extensions -> Core.Sexp.Atom "Extensions"
+    | Extensions_large -> Core.Sexp.Atom "Extensions_large"
     | Files -> Core.Sexp.Atom "Files"
     | Github_alt -> Core.Sexp.Atom "Github_alt"
     | Github -> Core.Sexp.Atom "Github"
@@ -1415,7 +1479,6 @@ module T = struct
     | References -> Core.Sexp.Atom "References"
     | Remote_explorer -> Core.Sexp.Atom "Remote_explorer"
     | Search -> Core.Sexp.Atom "Search"
-    | Settings_gear -> Core.Sexp.Atom "Settings_gear"
     | Source_control -> Core.Sexp.Atom "Source_control"
     | Terminal -> Core.Sexp.Atom "Terminal"
   ;;
@@ -1453,9 +1516,9 @@ module T = struct
        0-9z\"/>"
     | Add -> "<path d=\"M14 7v1H8v6H7V8H1V7h6V1h1v6h6z\"/>"
     | Archive ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.5 \
-       1h-13l-.5.5v3l.5.5H2v8.5l.5.5h11l.5-.5V5h.5l.5-.5v-3l-.5-.5zm-1 3H2V2h12v2h-.5zM3 \
-       13V5h10v8H3zm8-6H5v1h6V7z\"/>"
+      "<path d=\"M10 9H6V8H10V9Z\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" \
+       d=\"M15 2.5V5.5L14.5 6H14L14 13.5L13.5 14H2.5L2 13.5L2 6H1.5L1 5.5V2.5L1.5 \
+       2H14.5L15 2.5ZM3 13H13L13 6H3L3 13ZM2 5H14V3H2V5Z\"/>"
     | Arrow_both ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 9l2.146 \
        2.146-.707.708-3-3v-.708l3-3 .707.708L3 8h10l-2.146-2.146.707-.708 3 3v.708l-3 \
@@ -1912,6 +1975,117 @@ module T = struct
        10.8374C10.7912 11.0057 11.0472 11.0898 11.3659 11.0898C11.8027 11.0898 12.1626 \
        10.9377 12.4455 10.6333C12.7319 10.3254 12.8752 9.93685 12.8752 \
        9.46777V8.91992Z\"/>"
+    | Chat_sparkle_error ->
+      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.42995 2.00098L6.95495 \
+       2.15498C6.67595 2.25298 6.43695 2.43098 6.26295 2.67598C6.19195 2.77598 6.14395 \
+       2.88698 6.10195 2.99998H2.00195V11H4.50195L5.00195 11.5V13.293L6.05695 \
+       12.238C6.10995 12.631 6.20495 13.01 6.33695 13.372L4.85495 14.854L4.00095 \
+       14.5V12H1.50195L1.00195 11.5V2.50098L1.50195 2.00098H7.42995ZM7.28295 \
+       3.89698L8.35395 4.24498C8.62895 4.33698 8.88295 4.48198 9.10095 4.67098C9.14095 \
+       4.70598 9.18095 4.74298 9.21895 4.78098C9.41995 4.98198 9.57995 5.21798 9.68995 \
+       5.47898C9.71295 5.53398 9.73395 5.59098 9.75195 5.64798L9.94095 6.22898C10.321 \
+       6.11598 10.718 6.04698 11.128 6.01898L11.249 5.64798C11.357 5.32198 11.54 5.02598 \
+       11.783 4.78298C12.026 4.54098 12.322 4.35798 12.648 4.24998L13.719 3.90198C13.802 \
+       3.87198 13.873 3.81798 13.924 3.74698C13.975 3.67598 14.002 3.58998 14.002 \
+       3.50298C14.002 3.41598 13.975 3.32998 13.924 3.25898C13.873 3.18698 13.802 \
+       3.13298 13.719 3.10398L13.699 3.09898L12.627 2.75098C12.301 2.64298 12.005 \
+       2.46098 11.762 2.21798C11.519 1.97498 11.336 1.67998 11.228 1.35398L10.88 \
+       0.283977C10.851 0.200977 10.796 0.129977 10.725 0.0789766C10.653 0.0279766 10.568 \
+       0.000976562 10.48 0.000976562C10.392 0.000976562 10.308 0.0279766 10.236 \
+       0.0789766C10.164 0.129977 10.11 0.200977 10.081 0.283977L9.73295 1.35398C9.62595 \
+       1.67698 9.44595 1.97198 9.20795 2.21398C8.96995 2.45598 8.67695 2.63998 8.35495 \
+       2.75098L7.28395 3.09898C7.20095 3.12898 7.12995 3.18298 7.07895 3.25398C7.02795 \
+       3.32498 7.00095 3.41098 7.00095 3.49798C7.00095 3.58498 7.02795 3.67098 7.07895 \
+       3.74198C7.12995 3.81398 7.19995 3.86798 7.28295 3.89698ZM16.002 11.501C16.002 \
+       13.986 13.987 16.001 11.502 16.001C9.01695 16.001 7.00195 13.986 7.00195 \
+       11.501C7.00195 9.01598 9.01695 7.00098 11.502 7.00098C13.987 7.00098 16.002 \
+       9.01598 16.002 11.501ZM12.21 11.501L13.856 9.85498L13.15 9.14798L11.503 \
+       10.794L9.85695 9.14798L9.14995 9.85498L10.795 11.501L9.14995 13.147L9.85695 \
+       13.854L11.503 12.208L13.15 13.854L13.856 13.147L12.21 11.501Z\"/>"
+    | Chat_sparkle_warning ->
+      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.9395 8.00098L15.9395 \
+       15.2617L15.5 16.001H7.5L7.06055 15.2617L11.0605 8.00098H11.9395ZM11.501 \
+       13.752C11.352 13.752 11.207 13.7959 11.084 13.8779C10.961 13.9609 10.8646 14.0778 \
+       10.8076 14.2148C10.7506 14.3518 10.7356 14.5024 10.7646 14.6484C10.7937 14.7943 \
+       10.8648 14.9273 10.9697 15.0322C11.0746 15.1371 11.2077 15.2083 11.3535 \
+       15.2373C11.4985 15.2663 11.6501 15.2513 11.7871 15.1943C11.9241 15.1373 12.042 \
+       15.041 12.124 14.918L12.125 14.9189C12.207 14.795 12.251 14.6499 12.251 \
+       14.502C12.251 14.303 12.1722 14.1127 12.0312 13.9717C11.8913 13.8307 11.7 13.752 \
+       11.501 13.752ZM11 10.001V13.001H12V10.001H11Z\"/><path d=\"M7.42773 \
+       2.00195L6.95312 2.15625C6.67414 2.25324 6.43474 2.43178 6.26074 2.67676C6.18974 \
+       2.77676 6.14161 2.88798 6.09961 3.00098H2V11H4.5L5 11.5V13.293L7.14648 \
+       11.1475L7.14746 11.1484L7.50098 11.002H8.26758L7.7168 12.002H7.70801L4.85352 \
+       14.8564L4 14.502V12.002H1.5L1 11.502V2.50195L1.5 2.00195H7.42773Z\"/><path \
+       d=\"M13.4854 6.00098C13.5482 6.00105 13.6093 6.01976 13.6602 6.05566C13.7112 \
+       6.09166 13.7476 6.14315 13.7686 6.20215L14.0176 6.9668C14.0946 7.1988 14.2274 \
+       7.41098 14.4004 7.58398C14.5743 7.75679 14.7838 7.88785 15.0166 7.96484L15.7832 \
+       8.21387L15.7979 8.21777C15.8569 8.23777 15.9083 8.27713 15.9443 \
+       8.32812H15.9463C15.9832 8.37807 16.0019 8.44006 16.002 8.50195C16.002 8.56384 \
+       15.9822 8.62484 15.9463 8.67578C15.9103 8.72678 15.8588 8.76513 15.7998 \
+       8.78613L15.0352 9.03516C14.8022 9.11216 14.59 9.24302 14.417 9.41602C14.286 \
+       9.54699 14.1893 9.7051 14.1113 9.87207L12.7363 7.37598C12.8253 7.25003 12.9022 \
+       7.11473 12.9512 6.9668L13.2002 6.20215C13.2202 6.14419 13.2576 6.09166 13.3086 \
+       6.05566C13.3596 6.01966 13.4224 6.00098 13.4854 6.00098Z\"/><path d=\"M10.4785 \
+       0.000976562C10.5664 0.000976562 10.6517 0.0281932 10.7236 0.0791016C10.7946 \
+       0.130102 10.8499 0.20118 10.8789 0.28418L11.2266 1.35449C11.3345 1.68026 11.5179 \
+       1.9749 11.7607 2.21777C12.0037 2.46077 12.3 2.64298 12.626 2.75098L13.6982 \
+       3.09863L13.7178 3.10449C13.8007 3.13346 13.8719 3.1869 13.9229 3.25879C13.9738 \
+       3.32977 14.001 3.41596 14.001 3.50293C14.001 3.58993 13.9739 3.67607 13.9229 \
+       3.74707C13.8719 3.81802 13.8017 3.87236 13.7188 3.90234L12.6484 4.25C12.3224 \
+       4.358 12.0262 4.54121 11.7832 4.7832C11.5402 5.0262 11.357 5.32244 11.249 \
+       5.64844L10.9014 6.71777C10.8724 6.80072 10.818 6.87186 10.7461 6.92285C10.6761 \
+       6.97285 10.5909 7 10.5039 7H10.498C10.411 6.999 10.3269 6.97285 10.2559 \
+       6.92285C10.249 6.91797 10.2422 6.91306 10.2354 6.90723C10.1744 6.85823 10.1256 \
+       6.79177 10.0996 6.71777L9.75195 5.64844C9.73401 5.59163 9.71334 5.53432 9.69043 \
+       5.47949C9.58043 5.21849 9.41975 4.98225 9.21875 4.78125C9.18075 4.74325 9.14058 \
+       4.7059 9.10059 4.6709C8.88265 4.48202 8.62839 4.33708 8.35352 4.24512L7.2832 \
+       3.89746C7.20027 3.86848 7.12912 3.8141 7.07812 3.74219C7.02713 3.6712 7.00001 \
+       3.58503 7 3.49805C7 3.41105 7.02713 3.32491 7.07812 3.25391C7.12912 3.18297 \
+       7.20025 3.12862 7.2832 3.09863L8.35352 2.75098C8.67552 2.63998 8.96903 2.45587 \
+       9.20703 2.21387C9.44491 1.97196 9.62542 1.67733 9.73242 1.35449L10.0801 \
+       0.28418C10.1091 0.20118 10.1634 0.130102 10.2354 0.0791016C10.3072 0.0282821 \
+       10.3908 0.00107538 10.4785 0.000976562Z\"/>"
+    | Chat_sparkle ->
+      "<path d=\"M7.42773 2L6.95312 2.1543C6.67413 2.25229 6.43474 2.43079 6.26074 \
+       2.67578C6.18974 2.77578 6.14161 2.887 6.09961 3H2V11H4.5L5 11.5V13.293L7.14648 \
+       11.1465L7.5 11H12.2285L12.2725 11.1328C12.3634 11.3858 12.5261 11.6027 12.749 \
+       11.7617C12.97 11.9167 13.23 12 13.5 12H7.70703L4.85352 14.8535L4 14.5V12H1.5L1 \
+       11.5V2.5L1.5 2H7.42773Z\"/><path d=\"M13.4854 6C13.5482 6.00007 13.6093 6.01877 \
+       13.6602 6.05469C13.7112 6.09069 13.7485 6.14217 13.7695 6.20117L14.0186 \
+       6.96582C14.0956 7.19782 14.2274 7.41001 14.4004 7.58301C14.5742 7.75581 14.7848 \
+       7.88688 15.0176 7.96387L15.7832 8.21289L15.7979 8.2168C15.8569 8.2368 15.9083 \
+       8.27615 15.9443 8.32715H15.9463C15.9832 8.3771 16.0019 8.43908 16.002 \
+       8.50098C16.002 8.56287 15.9822 8.62386 15.9463 8.6748C15.9103 8.7258 15.8588 \
+       8.76416 15.7998 8.78516L15.0352 9.03418C14.8022 9.11118 14.59 9.24204 14.417 \
+       9.41504C14.244 9.58803 14.1131 9.79924 14.0361 10.0322L13.7871 10.7969C13.7661 \
+       10.8559 13.7268 10.9074 13.6758 10.9434C13.6248 10.9802 13.5638 10.999 13.501 \
+       10.999C13.4381 10.999 13.3771 10.9792 13.3262 10.9434C13.2742 10.9074 13.2358 \
+       10.8559 13.2148 10.7969L12.9658 10.0322C12.8888 9.79924 12.7579 9.58708 12.585 \
+       9.41309C12.412 9.23909 12.1998 9.10827 11.9668 9.03027L11.2021 8.78125C11.1431 \
+       8.76125 11.0917 8.7219 11.0557 8.6709C11.0188 8.61996 11 8.55895 11 8.49707C11 \
+       8.4352 11.0198 8.37418 11.0557 8.32324C11.0917 8.27224 11.1431 8.23389 11.2021 \
+       8.21289L11.9668 7.96387C12.1968 7.88487 12.4052 7.75308 12.5762 7.58008C12.7471 \
+       7.40709 12.8752 7.1968 12.9512 6.96582L13.2002 6.20117C13.2202 6.14223 13.2586 \
+       6.09068 13.3096 6.05469C13.3606 6.01869 13.4224 6 13.4854 6Z\"/><path \
+       d=\"M10.4775 -0.000976562C10.5655 -0.000976562 10.6507 0.0262216 10.7227 \
+       0.0771484C10.7937 0.128148 10.8489 0.199227 10.8779 0.282227L11.2256 \
+       1.35254C11.3336 1.67844 11.5169 1.97384 11.7598 2.2168C12.0028 2.4598 12.299 \
+       2.642 12.625 2.75L13.6973 3.09766L13.7178 3.10254C13.8007 3.13151 13.8719 3.18591 \
+       13.9229 3.25781C13.9738 3.3288 14.001 3.41497 14.001 3.50195C14.001 3.58895 \
+       13.9739 3.67509 13.9229 3.74609C13.8719 3.81703 13.8007 3.87139 13.7178 \
+       3.90137L12.6465 4.24902C12.3205 4.35702 12.0242 4.54023 11.7812 4.78223C11.5382 \
+       5.02523 11.3551 5.32146 11.2471 5.64746L10.8994 6.71777C10.8704 6.80071 10.8161 \
+       6.87186 10.7441 6.92285C10.6731 6.97385 10.587 7.00097 10.499 7.00098C10.411 \
+       7.00098 10.3259 6.97385 10.2539 6.92285C10.2471 6.91796 10.2402 6.91306 10.2334 \
+       6.90723C10.1724 6.85823 10.1246 6.79177 10.0986 6.71777L9.75098 5.64746C9.73198 \
+       5.59046 9.71148 5.53352 9.68848 5.47852C9.57848 5.21762 9.4187 4.98121 9.21777 \
+       4.78027C9.17977 4.74227 9.13961 4.70492 9.09961 4.66992C8.88167 4.48103 8.62743 \
+       4.3361 8.35254 4.24414L7.28125 3.89648C7.19833 3.86751 7.12716 3.8131 7.07617 \
+       3.74121C7.02519 3.67023 6.99806 3.58405 6.99805 3.49707C6.99805 3.41007 7.02517 \
+       3.32393 7.07617 3.25293C7.12717 3.18199 7.1983 3.12764 7.28125 3.09766L8.35254 \
+       2.75C8.67454 2.639 8.96708 2.45489 9.20508 2.21289C9.44303 1.97091 9.62348 1.6755 \
+       9.73047 1.35254L10.0781 0.282227C10.1071 0.199227 10.1614 0.128148 10.2334 \
+       0.0771484C10.3052 0.026327 10.3898 -0.000882398 10.4775 -0.000976562Z\"/>"
     | Check_all ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.62 3.596L7.815 \
        12.81l-.728-.033L4 8.382l.754-.53 2.744 3.907L14.917 3l.703.596z\"/><path \
@@ -2099,6 +2273,10 @@ module T = struct
       "<path d=\"M9 9H4v1h5V9z\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" \
        d=\"M5 3l1-1h7l1 1v7l-1 1h-2v2l-1 1H3l-1-1V6l1-1h2V3zm1 2h4l1 1v4h2V3H6v2zm4 \
        1H3v7h7V6z\"/>"
+    | Collection ->
+      "<path d=\"M14.5 1H7.5L7 1.5V3H1.5L1 3.5V12.5L1.5 13H4V14.5L4.5 15H11.5L12 \
+       14.5V11H14.5L15 10.5V1.5L14.5 1ZM4 5.5V12H2V4H7V5H4.5L4 5.5ZM11 14H5V6H11V14ZM14 \
+       10H12V5.5L11.5 5H8V2H14V10Z\"/>"
     | Color_mode ->
       "<path d=\"M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 13V2a6 6 0 1 1 0 12z\"/>"
     | Combine ->
@@ -2108,6 +2286,49 @@ module T = struct
        2.5l.5-.5h3l.5.5v3l-.5.5h-3l-.5-.5v-3zm1 \
        .5v2h2v-2H2zm10.5-7l-.5.5v6l.5.5h3l.5-.5v-6l-.5-.5h-3zM15 8h-2V6h2v2zm0 \
        3h-2V9h2v2zM9.1 8H6v1h3.1l-1 1 .7.6 1.8-1.8v-.7L8.8 6.3l-.7.7 1 1z\"/>"
+    | Comment_discussion_sparkle ->
+      "<path d=\"M16.002 8.50198C16.002 8.56398 15.982 8.62498 15.946 8.67598C15.91 \
+       8.72698 15.859 8.76498 15.8 8.78598L15.035 9.03498C14.802 9.11198 14.59 9.24298 \
+       14.417 9.41598C14.244 9.58898 14.113 9.79998 14.036 10.033L13.787 10.798C13.766 \
+       10.857 13.727 10.909 13.676 10.944C13.625 10.981 13.564 11 13.501 11C13.438 11 \
+       13.377 10.98 13.326 10.944C13.274 10.908 13.236 10.857 13.215 10.798L12.966 \
+       10.033C12.889 9.79998 12.758 9.58798 12.585 9.41398C12.412 9.23998 12.2 9.10898 \
+       11.967 9.03098L11.202 8.78198C11.143 8.76198 11.092 8.72298 11.056 8.67198C11.019 \
+       8.62098 11 8.55998 11 8.49798C11 8.43598 11.02 8.37498 11.056 8.32398C11.092 \
+       8.27298 11.143 8.23498 11.202 8.21398L11.967 7.96498C12.197 7.88598 12.405 \
+       7.75398 12.576 7.58098C12.747 7.40798 12.875 7.19798 12.951 6.96698L13.2 \
+       6.20198C13.22 6.14298 13.258 6.09098 13.309 6.05598C13.36 6.01998 13.422 6.00098 \
+       13.485 6.00098C13.548 6.00098 13.609 6.01998 13.66 6.05598C13.711 6.09198 13.748 \
+       6.14298 13.769 6.20198L14.018 6.96698C14.095 7.19898 14.227 7.41098 14.4 \
+       7.58398C14.574 7.75698 14.784 7.88798 15.017 7.96498L15.783 8.21398L15.798 \
+       8.21798C15.857 8.23798 15.908 8.27698 15.944 8.32798H15.946C15.983 8.37798 16.002 \
+       8.43998 16.002 8.50198ZM4 9.50098L3.5 9.00098H2V3.00098H6.098C6.142 2.88498 6.192 \
+       2.77098 6.264 2.67098C6.434 2.43398 6.669 2.25598 6.944 2.15698L7.425 \
+       2.00098H1.5L1 2.50098V9.50098L1.5 10.001H3V12.501L3.85 12.851L5 11.711V10.291L4 \
+       11.291V9.50098ZM14.738 11.107C14.64 11.385 14.476 11.602 14.256 11.759C14.178 \
+       11.815 14.089 11.851 14.001 11.888V13.001H12.501L12.001 13.501V14.291L10.851 \
+       13.151L10.501 13.001H7.001V9.00098H10.115C10.048 8.84298 10.001 8.67598 10.001 \
+       8.49798C10.001 8.32298 10.051 8.15898 10.12 8.00098H6.501L6.001 \
+       8.50098V13.501L6.501 14.001H10.291L12.151 15.851L13.001 \
+       15.501V14.001H14.501L15.001 13.501V10.324C14.998 10.333 14.989 10.339 14.986 \
+       10.348L14.738 11.107ZM7.076 3.25398C7.025 3.32498 6.998 3.41098 6.998 \
+       3.49798C6.998 3.58498 7.025 3.67098 7.076 3.74198C7.127 3.81398 7.198 3.86798 \
+       7.281 3.89698L8.352 4.24498C8.627 4.33698 8.881 4.48198 9.099 4.67098C9.139 \
+       4.70598 9.179 4.74298 9.217 4.78098C9.418 4.98198 9.578 5.21798 9.688 \
+       5.47898C9.711 5.53398 9.732 5.59098 9.75 5.64798L10.098 6.71798C10.124 6.79198 \
+       10.172 6.85798 10.233 6.90698C10.24 6.91298 10.247 6.91798 10.254 6.92298C10.326 \
+       6.97398 10.411 7.00098 10.499 7.00098C10.587 7.00098 10.673 6.97398 10.744 \
+       6.92298C10.816 6.87198 10.87 6.80098 10.899 6.71798L11.247 5.64798C11.355 5.32198 \
+       11.538 5.02598 11.781 4.78298C12.024 4.54098 12.32 4.35798 12.646 4.24998L13.717 \
+       3.90198C13.8 3.87198 13.871 3.81798 13.922 3.74698C13.973 3.67598 14 3.58998 14 \
+       3.50298C14 3.41598 13.973 3.32998 13.922 3.25898C13.871 3.18698 13.8 3.13298 \
+       13.717 3.10398L13.697 3.09898L12.625 2.75098C12.299 2.64298 12.003 2.46098 11.76 \
+       2.21798C11.517 1.97498 11.334 1.67998 11.226 1.35398L10.878 0.283977C10.849 \
+       0.200977 10.794 0.129977 10.723 0.0789766C10.651 0.0279766 10.566 0.000976562 \
+       10.478 0.000976562C10.39 0.000976562 10.306 0.0279766 10.234 0.0789766C10.162 \
+       0.129977 10.108 0.200977 10.079 0.283977L9.731 1.35398C9.624 1.67698 9.444 \
+       1.97198 9.206 2.21398C8.968 2.45598 8.675 2.63998 8.353 2.75098L7.282 \
+       3.09898C7.199 3.12898 7.127 3.18298 7.076 3.25398Z\"/>"
     | Comment_discussion ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 11.29l1-1v1.42l-1.15 \
        1.14L3 12.5V10H1.5L1 9.5v-8l.5-.5h12l.5.5V6h-1V2H2v7h1.5l.5.5v1.79zM10.29 13l1.86 \
@@ -2207,6 +2428,59 @@ module T = struct
        6.31066 14.432 8.06802C16.1893 9.82538 16.1893 12.6746 14.432 14.432ZM13.25 \
        12C13.6642 12 14 11.6642 14 11.25C14 10.8358 13.6642 10.5 13.25 10.5H9.25C8.83579 \
        10.5 8.5 10.8358 8.5 11.25C8.5 11.6642 8.83579 12 9.25 12H13.25Z\"/>"
+    | Copilot_error ->
+      "<path d=\"M13.807 2.265C13.228 1.532 12.313 1.141 11.083 1.004C9.877 0.870002 \
+       8.821 1.038 8.139 1.769C8.09 1.822 8.043 1.877 8 1.933C7.957 1.877 7.91 1.822 \
+       7.861 1.769C7.179 1.038 6.123 0.870002 4.917 1.004C3.687 1.141 2.772 1.532 2.193 \
+       2.265C1.628 2.981 1.5 3.879 1.5 4.75C1.5 5.322 1.553 5.897 1.754 6.405L1.586 \
+       7.243L1.52 7.276C0.588 7.742 0 8.694 0 9.736V11C0 11.24 0.086 11.438 0.156 \
+       11.567C0.231 11.704 0.325 11.828 0.415 11.933C0.595 12.143 0.819 12.346 1.02 \
+       12.513C1.225 12.684 1.427 12.836 1.577 12.943C1.816 13.116 2.062 13.275 2.318 \
+       13.423C2.625 13.6 3.066 13.832 3.614 14.065C4.391 14.395 5.404 14.722 6.553 \
+       14.887C6.203 14.377 5.931 13.809 5.751 13.202C5.173 13.055 4.645 12.873 4.201 \
+       12.684C3.717 12.479 3.331 12.274 3.067 12.123L3.002 12.085V7.824L3.025 \
+       7.709C3.515 7.919 4.1 8 4.752 8C5.898 8 6.812 7.672 7.462 7.009C7.681 6.785 7.859 \
+       6.535 8.002 6.266C8.049 6.354 8.106 6.436 8.16 6.52C8.579 6.238 9.038 6.013 9.522 \
+       5.843C9.26 5.52 9.077 5.057 8.996 4.407C8.879 3.471 9.034 3.011 9.238 2.793C9.431 \
+       2.586 9.875 2.379 10.919 2.495C11.939 2.608 12.398 2.899 12.632 3.195C12.879 \
+       3.508 13.002 3.984 13.002 4.75C13.002 5.158 12.967 5.453 12.909 5.674C13.398 \
+       5.792 13.865 5.967 14.3 6.197C14.443 5.741 14.502 5.248 14.502 4.75C14.502 3.879 \
+       14.374 2.981 13.809 2.265H13.807ZM7.006 4.407C6.915 5.133 6.704 5.637 6.388 \
+       5.959C6.089 6.264 5.604 6.5 4.75 6.5C3.828 6.5 3.47 6.301 3.308 6.12C3.129 5.92 3 \
+       5.542 3 4.75C3 3.984 3.123 3.508 3.37 3.195C3.604 2.899 4.063 2.609 5.083 \
+       2.495C6.127 2.379 6.571 2.586 6.764 2.793C6.968 3.011 7.123 3.471 7.006 \
+       4.407Z\"/><path d=\"M11.5 7C9.015 7 7 9.015 7 11.5C7 13.985 9.015 16 11.5 \
+       16C13.985 16 16 13.985 16 11.5C16 9.015 13.985 7 11.5 7ZM13.854 13.146L13.147 \
+       13.853L11.501 12.207L9.855 13.853L9.148 13.146L10.794 11.5L9.148 9.854L9.855 \
+       9.147L11.501 10.793L13.147 9.147L13.854 9.854L12.208 11.5L13.854 13.146Z\"/>"
+    | Copilot_in_progress ->
+      "<path d=\"M13.807 2.265C13.228 1.532 12.313 1.141 11.083 1.004C9.877 0.870002 \
+       8.821 1.038 8.139 1.769C8.09 1.822 8.043 1.877 8 1.933C7.957 1.877 7.91 1.822 \
+       7.861 1.769C7.179 1.038 6.123 0.870002 4.917 1.004C3.687 1.141 2.772 1.532 2.193 \
+       2.265C1.628 2.981 1.5 3.879 1.5 4.75C1.5 5.322 1.553 5.897 1.754 6.405L1.586 \
+       7.243L1.52 7.276C0.588 7.742 0 8.694 0 9.736V11C0 11.24 0.086 11.438 0.156 \
+       11.567C0.231 11.704 0.325 11.828 0.415 11.933C0.595 12.143 0.819 12.346 1.02 \
+       12.513C1.225 12.684 1.427 12.836 1.577 12.943C1.816 13.116 2.062 13.275 2.318 \
+       13.423C2.625 13.6 3.066 13.832 3.614 14.065C4.391 14.395 5.404 14.722 6.553 \
+       14.887C6.203 14.377 5.931 13.809 5.751 13.202C5.173 13.055 4.645 12.873 4.201 \
+       12.684C3.717 12.479 3.331 12.274 3.067 12.123L3.002 12.085V7.824L3.025 \
+       7.709C3.515 7.919 4.1 8 4.752 8C5.898 8 6.812 7.672 7.462 7.009C7.681 6.785 7.859 \
+       6.535 8.002 6.266C8.049 6.354 8.106 6.436 8.16 6.52C8.579 6.238 9.038 6.013 9.522 \
+       5.843C9.26 5.52 9.077 5.057 8.996 4.407C8.879 3.471 9.034 3.011 9.238 2.793C9.431 \
+       2.586 9.875 2.379 10.919 2.495C11.939 2.608 12.398 2.899 12.632 3.195C12.879 \
+       3.508 13.002 3.984 13.002 4.75C13.002 5.158 12.967 5.453 12.909 5.674C13.398 \
+       5.792 13.865 5.967 14.3 6.197C14.443 5.741 14.502 5.248 14.502 4.75C14.502 3.879 \
+       14.374 2.981 13.809 2.265H13.807ZM7.006 4.407C6.915 5.133 6.704 5.637 6.388 \
+       5.959C6.089 6.264 5.604 6.5 4.75 6.5C3.828 6.5 3.47 6.301 3.308 6.12C3.129 5.92 3 \
+       5.542 3 4.75C3 3.984 3.123 3.508 3.37 3.195C3.604 2.899 4.063 2.609 5.083 \
+       2.495C6.127 2.379 6.571 2.586 6.764 2.793C6.968 3.011 7.123 3.471 7.006 \
+       4.407Z\"/><path d=\"M11.5 7C9.015 7 7 9.015 7 11.5C7 13.985 9.015 16 11.5 \
+       16C13.985 16 16 13.985 16 11.5C16 9.015 13.985 7 11.5 7ZM11.5 14.25C10.963 14.25 \
+       10.445 14.105 10 13.844V14.5H9V12.5L9.5 12H11.5V13H10.536C10.823 13.16 11.155 \
+       13.25 11.5 13.25C12.177 13.25 12.805 12.907 13.137 12.354L13.994 12.87C13.481 \
+       13.722 12.525 14.25 11.5 14.25ZM14 10.5L13.5 11H11.5V10H12.464C12.177 9.84 11.845 \
+       9.75 11.5 9.75C10.823 9.75 10.195 10.093 9.863 10.646L9.006 10.13C9.519 9.278 \
+       10.475 8.75 11.5 8.75C12.037 8.75 12.555 8.895 13 9.156V8.5H14V10.5Z\"/>"
     | Copilot_not_connected ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.357 6.114C14.341 6.104 \
        14.324 6.094 14.308 6.084C13.888 5.835 13.434 5.636 12.957 5.495C12.987 5.306 \
@@ -2245,6 +2519,59 @@ module T = struct
        12.668 13.416C12.86 13.416 13.052 13.343 13.198 13.196C13.491 12.903 13.491 \
        12.428 13.198 12.135L12.314 11.251L13.198 10.367C13.491 10.074 13.491 9.599 \
        13.198 9.306C13.052 9.16 12.86 9.086 12.668 9.086Z\"/>"
+    | Copilot_snooze ->
+      "<path d=\"M10.605 4.854L8.459 7H10.502V8H7.252L6.898 7.146L9.044 \
+       5H7.001V4H10.251L10.605 4.854ZM16.001 0.52L15.751 0H11.501V1H14.71L11.36 \
+       5.188L11.751 6H16.001V5H12.792L16.001 0.988V0.52ZM9.75 9C9.336 9 9.001 9.336 \
+       9.001 9.75V11.25C9.001 11.664 9.337 12 9.751 12C10.165 12 10.501 11.664 10.501 \
+       11.25V9.75C10.501 9.336 10.165 9 9.752 9H9.751H9.75ZM14.481 7.276L14.415 \
+       7.243L14.366 7H13.001V12.085L12.936 12.123C12.673 12.274 12.286 12.479 11.802 \
+       12.684C10.831 13.096 9.495 13.499 8.001 13.499C6.507 13.499 5.172 13.096 4.2 \
+       12.684C3.717 12.479 3.33 12.274 3.066 12.123L3.001 12.085V7.824L3.024 7.709C3.514 \
+       7.919 4.099 8 4.751 8C5.244 8 5.684 7.927 6.088 7.805L5.718 6.912L6.63 \
+       6H6.339C6.037 6.284 5.564 6.5 4.751 6.5C3.829 6.5 3.471 6.301 3.309 6.12C3.13 \
+       5.92 3.001 5.542 3.001 4.75C3.001 3.984 3.124 3.508 3.371 3.195C3.605 2.899 4.064 \
+       2.609 5.084 2.495C6.128 2.379 6.572 2.586 6.765 2.793C6.815 2.846 6.861 2.915 \
+       6.901 3H9.1C9.141 2.915 9.187 2.846 9.236 2.793C9.399 2.618 9.767 2.456 10.5 \
+       2.476V0.978C9.542 0.957 8.707 1.161 8.139 1.769C8.09 1.822 8.043 1.877 8 \
+       1.933C7.957 1.877 7.91 1.822 7.861 1.769C7.179 1.038 6.123 0.87 4.917 1.004C3.687 \
+       1.141 2.772 1.532 2.193 2.265C1.628 2.981 1.5 3.879 1.5 4.75C1.5 5.322 1.553 \
+       5.897 1.754 6.405L1.586 7.243L1.52 7.276C0.588 7.742 0 8.694 0 9.736V11C0 11.24 \
+       0.086 11.438 0.156 11.567C0.231 11.704 0.325 11.828 0.415 11.933C0.595 12.143 \
+       0.819 12.346 1.02 12.513C1.225 12.684 1.427 12.836 1.577 12.943C1.816 13.116 \
+       2.062 13.275 2.318 13.423C2.625 13.6 3.066 13.832 3.614 14.065C4.705 14.528 6.245 \
+       15 8.001 15C9.757 15 11.297 14.528 12.388 14.065C12.936 13.833 13.377 13.6 13.684 \
+       13.423C13.94 13.276 14.186 13.116 14.425 12.943C14.574 12.835 14.777 12.684 \
+       14.982 12.513C15.183 12.346 15.407 12.143 15.587 11.933C15.677 11.828 15.771 \
+       11.704 15.846 11.567C15.916 11.438 16.002 11.239 16.002 11V9.736C16.002 8.694 \
+       15.413 7.742 14.482 7.276H14.481ZM6.251 9C5.837 9 5.501 9.336 5.501 \
+       9.75V11.25C5.501 11.664 5.837 12 6.251 12C6.665 12 7.001 11.664 7.001 \
+       11.25V9.75C7.001 9.336 6.665 9 6.251 9Z\"/>"
+    | Copilot_success ->
+      "<path d=\"M13.807 2.265C13.228 1.532 12.313 1.141 11.083 1.004C9.877 0.870002 \
+       8.821 1.038 8.139 1.769C8.09 1.822 8.043 1.877 8 1.933C7.957 1.877 7.91 1.822 \
+       7.861 1.769C7.179 1.038 6.123 0.870002 4.917 1.004C3.687 1.141 2.772 1.532 2.193 \
+       2.265C1.628 2.981 1.5 3.879 1.5 4.75C1.5 5.322 1.553 5.897 1.754 6.405L1.586 \
+       7.243L1.52 7.276C0.588 7.742 0 8.694 0 9.736V11C0 11.24 0.086 11.438 0.156 \
+       11.567C0.231 11.704 0.325 11.828 0.415 11.933C0.595 12.143 0.819 12.346 1.02 \
+       12.513C1.225 12.684 1.427 12.836 1.577 12.943C1.816 13.116 2.062 13.275 2.318 \
+       13.423C2.625 13.6 3.066 13.832 3.614 14.065C4.391 14.395 5.404 14.722 6.553 \
+       14.887C6.203 14.377 5.931 13.809 5.751 13.202C5.173 13.055 4.645 12.873 4.201 \
+       12.684C3.717 12.479 3.331 12.274 3.067 12.123L3.002 12.085V7.824L3.025 \
+       7.709C3.515 7.919 4.1 8 4.752 8C5.898 8 6.812 7.672 7.462 7.009C7.681 6.785 7.859 \
+       6.535 8.002 6.266C8.049 6.354 8.106 6.436 8.16 6.52C8.579 6.238 9.038 6.013 9.522 \
+       5.843C9.26 5.52 9.077 5.057 8.996 4.407C8.879 3.471 9.034 3.011 9.238 2.793C9.431 \
+       2.586 9.875 2.379 10.919 2.495C11.939 2.608 12.398 2.899 12.632 3.195C12.879 \
+       3.508 13.002 3.984 13.002 4.75C13.002 5.158 12.967 5.453 12.909 5.674C13.398 \
+       5.792 13.865 5.967 14.3 6.197C14.443 5.741 14.502 5.248 14.502 4.75C14.502 3.879 \
+       14.374 2.981 13.809 2.265H13.807ZM7.006 4.407C6.915 5.133 6.704 5.637 6.388 \
+       5.959C6.089 6.264 5.604 6.5 4.75 6.5C3.828 6.5 3.47 6.301 3.308 6.12C3.129 5.92 3 \
+       5.542 3 4.75C3 3.984 3.123 3.508 3.37 3.195C3.604 2.899 4.063 2.609 5.083 \
+       2.495C6.127 2.379 6.571 2.586 6.764 2.793C6.968 3.011 7.123 3.471 7.006 \
+       4.407Z\"/><path d=\"M11.5 7C9.015 7 7 9.015 7 11.5C7 13.985 9.015 16 11.5 \
+       16C13.985 16 16 13.985 16 11.5C16 9.015 13.985 7 11.5 7ZM11.393 13.309L10.7 \
+       13.401L8.7 11.901L9.3 11.1L10.909 12.307L13.357 9.192L14.143 9.809L11.393 \
+       13.309Z\"/>"
     | Copilot_unavailable ->
       "<path d=\"M6.99999 9.769V11.269C6.99999 11.683 6.66399 12.019 6.24999 \
        12.019C5.83599 12.019 5.49999 11.683 5.49999 11.269V9.769C5.49999 9.355 5.83599 \
@@ -2579,11 +2906,13 @@ module T = struct
        1h13l.5.5v13l-.5.5h-13l-.5-.5v-13l.5-.5zM2 2v12h12V2H2zm6 9a3 3 0 1 0 0-6 3 3 0 0 \
        0 0 6z\"/>"
     | Diff_multiple ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.70994 1.29L12.7099 \
-       4.29L12.9999 5V14L11.9999 15H2.99994L1.99994 14V2L2.99994 1H8.99994L9.70994 \
-       1.29ZM2.99994 14H11.9999V5L8.99994 2H2.99994V14ZM7 6H5V7H7V9H8V7H10V6H8V4H7V6ZM5 \
-       11H10V12H5V11Z\"/><path d=\"M12.4199 0.999756L14.7099 3.28976L14.9999 3.99976L15 \
-       13.9998L14 14.9998L13.9999 3.99976L10.9999 0.999756H12.4199Z\"/>"
+      "<path d=\"M9.99994 12H4.99994V11H9.99994V12Z\"/><path d=\"M7.99994 \
+       6H9.99994V7H7.99994V9H6.99994V7H4.99994V6H6.99994V4H7.99994V6Z\"/><path \
+       fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.7099 1.29004L13.7099 \
+       4.29004L13.9999 5V14L12.9999 15H2.99994L1.99994 14V2L2.99994 1H9.99994L10.7099 \
+       1.29004ZM2.99994 14H12.9999V5L9.99994 2H2.99994V14Z\"/><path d=\"M13.42 \
+       0.999756L15.71 3.28976L16 3.99976L16.0001 13.9998L15.0001 14.9998L15 3.99976L12 \
+       0.999756H13.42Z\"/>"
     | Diff_removed ->
       "<path d=\"M10 7v1H5V7h5z\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" \
        d=\"M1.5 1h12l.5.5v12l-.5.5h-12l-.5-.5v-12l.5-.5zM2 13h11V2H2v11z\"/>"
@@ -2592,12 +2921,12 @@ module T = struct
        1h13l.5.5v13l-.5.5h-13l-.5-.5v-13l.5-.5zM2 \
        14h12V2H2v12zm2-5h3v3l5-4-5-4v3H4v2z\"/>"
     | Diff_single ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.7099 1.28902L13.7099 \
-       4.28902L13.9999 4.99902V13.999L12.9999 14.999H3.99994L2.99994 \
-       13.999V1.99902L3.99994 0.999023H9.99994L10.7099 1.28902ZM3.99994 \
-       13.999H12.9999V4.99902L9.99994 1.99902H3.99994V13.999ZM8 \
-       5.99902H6V6.99902H8V8.99902H9V6.99902H11V5.99902H9V3.99902H8V5.99902ZM6 \
-       10.999H11V11.999H6V10.999Z\"/>"
+      "<path d=\"M9.99994 11.999H4.99994V10.999H9.99994V11.999Z\"/><path d=\"M7.99994 \
+       5.99902H9.99994V6.99902H7.99994V9H6.99994V6.99902H4.99994V5.99902H6.99994V4H7.99994V5.99902Z\"/><path \
+       fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.7099 1.28906L13.7099 \
+       4.28906L13.9999 4.99902V13.999L12.9999 14.999H2.99994L1.99994 \
+       13.999V1.99902L2.99994 0.999023H9.99994L10.7099 1.28906ZM2.99994 \
+       13.999H12.9999V4.99902L9.99994 1.99902H2.99994V13.999Z\"/>"
     | Diff ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 \
        3.5l.5-.5h5l.5.5v9l-.5.5h-5l-.5-.5v-9zM3 \
@@ -2608,27 +2937,57 @@ module T = struct
        6h3.5V5H4.979l.941-.941a3.552 3.552 0 1 1 5.023 5.023L5.746 14.28l.72.72 \
        5.198-5.198A4.57 4.57 0 0 0 5.2 3.339l-.7.7V2h-1z\"/>"
     | Edit_session ->
-      "<path d=\"M12 14V6.5H13V14L12 15H3L2 14V2L3 1H8V2H3V14H12Z\"/><path d=\"M7.00006 \
-       4H8V6H10.0001V7H8.00006V9H7.00006V7H5.00006V6H7.00006V4Z\"/><path d=\"M10.0001 \
-       11H5.00006V12H10.0001V11Z\"/><path d=\"M13.8867 \
-       0.596993V2.28996H12.1938V1.72564H12.7493C12.5964 1.57868 12.4245 1.46405 12.2334 \
-       1.38175C12.0424 1.29946 11.8411 1.25831 11.6294 1.25831C11.4737 1.25831 11.3252 \
-       1.28035 11.1841 1.32444C11.0431 1.36853 10.9079 1.43025 10.7785 1.50961C10.6492 \
-       1.58896 10.5346 1.68449 10.4347 1.79618C10.3347 1.90787 10.2524 2.03278 10.1878 \
-       2.17092L9.5 1.84467C9.59993 1.63599 9.72338 1.45082 9.87034 1.28917C10.0173 \
-       1.12751 10.1848 0.986434 10.3729 0.865927C10.561 0.745421 10.7609 0.654307 \
-       10.9725 0.592584C11.1841 0.530861 11.4031 0.5 11.6294 0.5C11.9498 0.5 12.2569 \
-       0.563192 12.5509 0.689577C12.8448 0.815961 13.102 0.993781 13.3224 \
-       1.22304V0.596993H13.8867Z\"/><path d=\"M9.5 \
-       5.13714V3.44418H11.193V4.0085H10.6375C10.7903 4.15546 10.9622 4.27008 11.1533 \
-       4.35238C11.3443 4.43468 11.5457 4.47583 11.7573 4.47583C11.9131 4.47583 12.0615 \
-       4.45378 12.2026 4.40969C12.3437 4.36561 12.4789 4.30388 12.6082 4.22453C12.7375 \
-       4.14517 12.8521 4.04965 12.9521 3.93796C13.052 3.82627 13.1343 3.70135 13.199 \
-       3.56321L13.8867 3.88946C13.7868 4.09814 13.6633 4.28331 13.5164 4.44496C13.3694 \
-       4.60662 13.2019 4.7477 13.0138 4.86821C12.8257 4.98871 12.6258 5.07983 12.4142 \
-       5.14155C12.2026 5.20327 11.9836 5.23413 11.7573 5.23413C11.4369 5.23413 11.1298 \
-       5.17094 10.8359 5.04456C10.5419 4.91817 10.2848 4.74035 10.0643 \
-       4.5111V5.13714H9.5Z\"/>"
+      "<path d=\"M9 1.99902H3V13.999H13V9H14V13.999L13 14.999H3L2 13.999V1.99902L3 \
+       0.999023H9V1.99902Z\"/><path d=\"M10 11.999H5V10.999H10V11.999Z\"/><path d=\"M8 \
+       5.99902H9V6.99902H8V9H7V6.99902H5V5.99902H7V4H8V5.99902Z\"/><path d=\"M15 \
+       1V1.775C14.471 1.294 13.771 1 13 1C11.698 1 10.598 1.839 10.184 3H11.278C11.625 \
+       2.405 12.263 2 13 2C13.737 2 14.385 2.403 14.731 3H13.5V4H15.5L16 \
+       3.5V1H15Z\"/><path d=\"M11 7V6.225C11.529 6.706 12.229 7 13 7C14.302 7 15.402 \
+       6.161 15.816 5H14.722C14.375 5.595 13.737 6 13 6C12.263 6 11.615 5.597 11.269 \
+       5H12.5V4H10.5L10 4.5V7H11Z\"/>"
+    | Edit_sparkle ->
+      "<path d=\"M13.2305 2.00098L15 3.77148V5.23145L7.79004 12.4307L7.58008 \
+       12.5908L3.45996 14.9609L2.04004 13.541L4.16992 9.82129L4.66992 9.98145C4.7599 \
+       10.0114 4.8404 10.0611 4.90039 10.1211C4.96025 10.181 5.01007 10.261 5.04004 \
+       10.3408L5.0498 10.3809L3.45996 13.541L6.41992 11.9912L7.16992 11.6006L14.2402 \
+       4.53125L12.4697 2.76074L8.25977 6.9707C8.20991 6.9507 8.1698 6.92078 8.12988 \
+       6.88086C8.06002 6.81096 8.02021 6.741 7.99023 6.66113L7.76953 6.00098L11.7695 \
+       2.00098H13.2305Z\"/><path d=\"M6.50684 6.00098C6.56967 6.00098 6.63072 6.01985 \
+       6.68164 6.05566C6.73264 6.09166 6.77099 6.14315 6.79199 6.20215L7.04102 \
+       6.9668C7.118 7.19876 7.24891 7.411 7.42188 7.58398C7.59587 7.75698 7.80705 \
+       7.88784 8.04004 7.96484L8.80469 8.21387L8.82031 8.21777C8.87923 8.23779 8.92986 \
+       8.27719 8.96582 8.32812H8.96777C9.00476 8.37811 9.0244 8.43997 9.02441 \
+       8.50195C9.02441 8.56394 9.00376 8.62479 8.96777 8.67578C8.93181 8.72673 8.88119 \
+       8.76512 8.82227 8.78613L8.05664 9.03516C7.82389 9.11214 7.61232 9.24321 7.43945 \
+       9.41602C7.26645 9.58902 7.13462 9.8002 7.05762 10.0332L6.80859 10.7979C6.78759 \
+       10.8569 6.74924 10.9083 6.69824 10.9443C6.64736 10.9812 6.58628 10.9999 6.52344 \
+       11C6.46044 11 6.39866 10.9803 6.34766 10.9443C6.2957 10.9083 6.25829 10.8568 \
+       6.2373 10.7979L5.98828 10.0332C5.91132 9.80031 5.78031 9.58802 5.60742 \
+       9.41406C5.43449 9.24013 5.22214 9.10926 4.98926 9.03125L4.22363 8.78223C4.16475 \
+       8.7622 4.11407 8.72279 4.07812 8.67188C4.04115 8.62089 4.02247 8.56002 4.02246 \
+       8.49805C4.02246 8.43609 4.04217 8.3752 4.07812 8.32422C4.11406 8.27331 4.16476 \
+       8.23489 4.22363 8.21387L4.98926 7.96484C5.21906 7.88587 5.42676 7.75389 5.59766 \
+       7.58105C5.76866 7.40805 5.89666 7.1978 5.97266 6.9668L6.22168 6.20215C6.24168 \
+       6.14315 6.28103 6.09166 6.33203 6.05566C6.38295 6.01977 6.44397 6.00101 6.50684 \
+       6.00098Z\"/><path d=\"M3.5 0C3.588 0 3.67312 0.027125 3.74512 0.078125C3.81606 \
+       0.129119 3.87141 0.200251 3.90039 0.283203L4.24805 1.35352C4.35605 1.67951 \
+       4.53923 1.97478 4.78223 2.21777C5.02523 2.46077 5.32146 2.64298 5.64746 \
+       2.75098L6.71875 3.09863L6.74023 3.10352C6.82322 3.13252 6.89432 3.1868 6.94531 \
+       3.25879C6.9963 3.32977 7.02342 3.41595 7.02344 3.50293C7.02344 3.58989 6.99627 \
+       3.67609 6.94531 3.74707C6.89433 3.81805 6.8232 3.87234 6.74023 3.90234L5.66797 \
+       4.25C5.34199 4.358 5.04572 4.54121 4.80273 4.7832C4.55986 5.02616 4.37652 5.32255 \
+       4.26855 5.64844L3.9209 6.71875C3.8919 6.80175 3.83763 6.87283 3.76562 \
+       6.92383C3.69478 6.97466 3.60925 7.00186 3.52148 7.00195C3.43355 7.00195 3.34833 \
+       6.97476 3.27637 6.92383C3.26937 6.91883 3.26188 6.91419 3.25488 6.9082C3.19388 \
+       6.8592 3.14709 6.79275 3.12109 6.71875L2.77344 5.64844C2.75448 5.59157 2.7329 \
+       5.53535 2.70996 5.48047C2.6 5.21957 2.44112 4.9822 2.24023 4.78125C2.20223 \
+       4.74325 2.16207 4.7059 2.12207 4.6709C1.90408 4.48191 1.64998 4.33711 1.375 \
+       4.24512L0.302734 3.89746C0.219781 3.86845 0.148634 3.81416 0.0976562 \
+       3.74219C0.0466877 3.67121 0.019541 3.58501 0.0195312 3.49805C0.0195312 3.41109 \
+       0.0467073 3.32489 0.0976562 3.25391C0.148629 3.18294 0.219792 3.12864 0.302734 \
+       3.09863L1.375 2.75098C1.69693 2.64 1.98859 2.45579 2.22656 2.21387C2.46456 \
+       1.97187 2.64495 1.67652 2.75195 1.35352L3.09961 0.283203C3.12859 0.20026 3.18296 \
+       0.129117 3.25488 0.078125C3.32688 0.0271287 3.41201 3.90111e-06 3.5 0Z\"/>"
     | Edit ->
       "<path d=\"M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 \
        4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 \
@@ -2682,6 +3041,13 @@ module T = struct
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.086 \
        7l-2.39-2.398.702-.704L15 7.5l-3.602 3.602-.703-.704 2.383-2.382V8H3V7h10.086zM1 \
        4h1v7H1V4z\"/>"
+    | Extensions ->
+      "<path d=\"M15.5066 4.646L12.0066 1.146H11.2996L8.65365 3.792V2.499L8.15365 \
+       1.999H2.15265L1.65265 2.499V14.499L2.15265 14.999H14.1526L14.6526 \
+       14.499V8.499L14.1526 7.999H12.8596L15.5056 5.353V4.646H15.5066ZM2.65265 \
+       3H7.65265V8H2.65265V3ZM2.65265 9H7.65265V14H2.65265V9ZM13.6526 \
+       14H8.65265V9H13.6526V14ZM8.65265 8V6.207L10.4456 8H8.65265ZM11.6526 7.793L8.85965 \
+       5L11.6526 2.207L14.4456 5L11.6526 7.793Z\"/>"
     | Eye_closed ->
       "<path d=\"M1.47978 1.4797C1.30227 1.65721 1.28614 1.93498 1.43137 2.13072L1.47978 \
        2.1868L4.1695 4.87652C2.88817 5.77616 1.93052 7.11985 1.53259 8.70952C1.46554 \
@@ -2734,31 +3100,39 @@ module T = struct
        8.88071 2 7.5C2 6.11929 3.11929 5 4.5 5C5.88071 5 7 6.11929 7 7.5C7 8.88071 \
        5.88071 10 4.5 10Z\"/>"
     | File_binary ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.57 1.14l3.28 \
-       3.3.15.36v9.7l-.5.5h-11l-.5-.5v-13l.5-.5h7.72l.35.14zM3 2v12h10V5l-3-3H3zm1.46 \
-       4.052c0 1.287.458 1.93 1.374 1.93.457 0 .807-.173 \
-       1.05-.52.246-.348.368-.847.368-1.499C7.252 4.654 6.805 4 5.91 4c-.471 \
-       0-.831.175-1.08.526-.247.35-.37.858-.37 \
-       1.526zm.862-.022c0-.922.183-1.383.55-1.383.344 0 .516.448.516 1.343s-.176 \
-       1.343-.527 1.343c-.36 0-.54-.434-.54-1.303zm3.187 \
-       1.886h2.435v-.672h-.792V4l-1.665.336v.687l.82-.177v2.398h-.798v.672zm-1.337 \
-       5H4.736v-.672h.798V9.846l-.82.177v-.687L6.38 9v3.244h.792v.671zm1.035-1.931c0 \
-       1.287.458 1.93 1.375 1.93.457 0 .807-.173 1.05-.52.245-.348.368-.847.368-1.499 \
-       0-1.309-.448-1.963-1.343-1.963-.47 0-.83.175-1.08.526-.246.35-.37.858-.37 \
-       1.526zm.862-.022c0-.922.184-1.383.55-1.383.344 0 .516.448.516 1.343s-.175 \
-       1.343-.526 1.343c-.36 0-.54-.434-.54-1.303z\"/>"
+      "<path d=\"M13.85 4.44002L10.571 1.13902L10.22 0.999023H2.5L2 1.49902V14.499L2.5 \
+       14.999H13.5L14 14.499V4.80002L13.85 4.44002ZM13 14H3V2.00002H10L13 \
+       5.00002V14ZM5.937 12.286H6.729V12.958H4.293V12.286H5.091V9.88802L4.272 \
+       10.066V9.37902L5.937 9.04302V12.286ZM9.554 9.00802C9.083 9.00802 8.724 9.18402 \
+       8.475 9.53402C8.228 9.88302 8.104 10.392 8.104 11.059C8.104 12.346 8.562 12.991 \
+       9.479 12.991C9.935 12.991 10.285 12.817 10.529 12.469C10.774 12.122 10.897 11.622 \
+       10.897 10.971C10.897 9.66202 10.449 9.00702 9.554 9.00702V9.00802ZM9.506 \
+       12.341C9.146 12.341 8.966 11.907 8.966 11.038C8.966 10.116 9.15 9.65502 9.517 \
+       9.65502C9.86 9.65502 10.033 10.103 10.033 10.998C10.033 11.893 9.857 12.34 9.507 \
+       12.341H9.506ZM9.937 7.28602H10.729V7.95802H8.293V7.28602H9.091V4.88802L8.272 \
+       5.06602V4.37802L9.937 4.04202V7.28602ZM5.554 4.00902C5.083 4.00902 4.723 4.18402 \
+       4.474 4.53502C4.227 4.88402 4.104 5.39302 4.104 6.06002C4.104 7.34702 4.562 \
+       7.99102 5.479 7.99102C5.935 7.99102 6.285 7.81802 6.529 7.47002C6.774 7.12302 \
+       6.897 6.62302 6.897 5.97102C6.897 4.66302 6.449 4.00902 5.554 4.00902ZM5.505 \
+       7.34202C5.145 7.34202 4.965 6.90802 4.965 6.03902C4.965 5.11702 5.149 4.65602 \
+       5.516 4.65602C5.86 4.65602 6.032 5.10402 6.032 5.99902C6.032 6.89402 5.856 \
+       7.34202 5.505 7.34202Z\"/>"
     | File_code ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.57 1.14l3.28 \
-       3.3.15.36v9.7l-.5.5h-11l-.5-.5v-13l.5-.5h7.72l.35.14zM10 5h3l-3-3v3zM3 \
-       2v12h10V6H9.5L9 5.5V2H3zm2.062 7.533l1.817-1.828L6.17 7 4 9.179v.707l2.171 \
-       2.174.707-.707-1.816-1.82zM8.8 7.714l.7-.709 2.189 2.175v.709L9.5 \
-       12.062l-.705-.709 1.831-1.82L8.8 7.714z\"/>"
+      "<path d=\"M13.85 4.44002L10.571 1.13902L10.22 0.999023H2.5L2 1.49902V14.499L2.5 \
+       14.999H13.5L14 14.499V4.80002L13.85 4.44002ZM13 14H3V2.00002H9V5.50002L9.5 \
+       6.00002H13V14ZM10 5.00002V2.00002L13 5.00002H10ZM6.854 7.85402L5.208 \
+       9.50002L6.854 11.146L6.147 11.853L4.147 9.85302V9.14602L6.147 7.14602L6.854 \
+       7.85402ZM9.146 7.85402L9.853 7.14702L11.853 9.14702V9.85402L9.853 11.854L9.146 \
+       11.147L10.792 9.50102L9.146 7.85402Z\"/>"
     | File_media ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 \
-       2h6v3.5l.5.5H12v1h1V4.8l-.15-.36-3.28-3.3L9.22 1H1.5l-.5.5v13l.5.5H5v-1H2V2zm7 \
-       0l3 3H9V2zm5.5 6h-8l-.5.5v6l.5.5h8l.5-.5v-6l-.5-.5zM14 9v4l-1.63-1.6h-.71l-1.16 \
-       1.17-2.13-2.13h-.71L7 11.1V9h7zm-2.8 4.27l.81-.81L13.55 14h-1.62l-.73-.73zM7 \
-       14v-1.49l1-1L10.52 14H7zm5.5-3.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z\"/>"
+      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.2197 1L10.5703 \
+       1.13965L13.8496 4.44043L14 4.7998V7H13V6H9.5L9 5.5V2H3V14H6V15H2.5L2 14.5V1.5L2.5 \
+       1H10.2197ZM10 5H13L10 2V5Z\"/><path d=\"M15.5 8H7.5L7 8.5V15.5L7.5 16H15.5L16 \
+       15.5V8.5L15.5 8ZM15 9V14L13.37 12.4H12.66L11.5 13.57L9.37 11.44H8.66L8 \
+       12.1V9H15ZM12.2 14.27L13.01 13.46L14.55 15H12.93L12.2 14.27ZM8 15V13.51L9 \
+       12.51L11.52 15H8Z\"/><path d=\"M14 10.5C14 10.7761 13.7761 11 13.5 11C13.2239 11 \
+       13 10.7761 13 10.5C13 10.2239 13.2239 10 13.5 10C13.7761 10 14 10.2239 14 \
+       10.5Z\"/>"
     | File_pdf ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.85 \
        4.44l-3.28-3.3-.35-.14H2.5l-.5.5V7h1V2h6v3.5l.5.5H13v1h1V4.8l-.15-.36zM10 5V2l3 \
@@ -2788,14 +3162,17 @@ module T = struct
        5h3l-3-3v3zM8.5 7h-7l-.5.5v7l.5.5h7l.5-.5v-7L8.5 7zM8 14H2V8h6v6zM7 \
        9.5v3H6v-1.793l-2.646 2.647-.708-.708L5.293 10H3.53V9H6.5l.5.5z\"/>"
     | File_zip ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.5 \
-       1h11l.5.5v5l-.15.35-.85.86v6.79l-.5.5h-10l-.5-.5v-13l.5-.5zM6 2H5v2h1V2zm0 \
-       12h4V7.68l-.85-.85L9 6.47V2H7v2.5l-.5.5H6v1H5V5h-.5L4 \
-       4.5V2H3v12h2v-1h1v1zm0-2v1h1v-1H6zm0-1v1H5v-1h1zm0-1h1v1H6v-1zm0-1v1H5V9h1zm0-1h1v1H6V8zm0-1v1H5V7h1zm0 \
-       0h1V6H6v1zm6.15.15l.85-.86V2h-3v4.27l.85.85.15.35V14h1V7.5l.15-.35z\"/>"
+      "<path d=\"M7 12V13H6V12H7Z\"/><path d=\"M6 12H5V11H6V12Z\"/><path d=\"M7 \
+       11H6V10H7V11Z\"/><path d=\"M6 10H5V9H6V10Z\"/><path d=\"M7 9H6V8H7V9Z\"/><path \
+       d=\"M6 8H5V7H6V8Z\"/><path d=\"M7 7H6V6H7V7Z\"/><path fill-rule=\"evenodd\" \
+       clip-rule=\"evenodd\" d=\"M15 1.5V6.5L14.8496 6.84961L14 7.70996V14.5L13.5 \
+       15H2.5L2 14.5V1.5L2.5 1L14.5 1L15 1.5ZM3 14H5V13H6V14H11V7.67969L10.1504 \
+       6.83008L10 6.46973V2H7V4.5L6.5 5H6V6H5V5H4.5L4 4.5V2H3V14ZM11 6.26953L11.8496 \
+       7.12012L12 7.46973V14H13V7.5L13.1504 7.15039L14 6.29004V2H11V6.26953ZM5 \
+       4H6V2H5V4Z\"/>"
     | File ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.71 4.29l-3-3L10 1H4L3 \
-       2v12l1 1h9l1-1V5l-.29-.71zM13 14H4V2h5v4h4v8zm-3-9V2l3 3h-3z\"/>"
+      "<path d=\"M13.85 4.44L10.57 1.14L10.22 1H2.5L2 1.5V14.5L2.5 15H13.5L14 \
+       14.5V4.8L13.85 4.44ZM13 5H10V2L13 5ZM3 14V2H9V5.5L9.5 6H13V14H3Z\"/>"
     | Filter_filled ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 2v1.67l-5 \
        4.759V14H6V8.429l-5-4.76V2h14z\"/>"
@@ -2996,6 +3373,53 @@ module T = struct
        0 0 0-1.5-1.5H8.687l1.269 1.27-.71.709L7.117 3.84v-.7l2.13-2.13.71.711-1.269 \
        1.27h1.85a2.484 2.484 0 0 1 2.312 1.541c.125.302.189.628.187.957V7zM13 \
        16h-1v-3H9v-1h3V9h1v3h3v1h-3v3z\"/>"
+    | Git_pull_request_done ->
+      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0001 7.99964C13.0603 \
+       8.00102 14.0774 8.42289 14.8272 9.17249C15.5769 9.92226 15.9987 10.9394 16.0001 \
+       11.9996C16.0001 12.7907 15.7647 13.5645 15.3253 14.2223C14.8857 14.8799 14.2611 \
+       15.3923 13.5303 15.695C12.7996 15.9976 11.9956 16.0767 11.2198 15.9225C10.444 \
+       15.7681 9.73029 15.3871 9.17096 14.8278C8.6119 14.2685 8.23051 13.5555 8.07623 \
+       12.7799C7.92207 12.0044 8.00128 11.1999 8.30377 10.4694C8.60653 9.73856 9.11967 \
+       9.11295 9.7774 8.67347C10.4351 8.23403 11.2091 7.99969 12.0001 7.99964ZM11.417 \
+       12.65L10.1163 11.609L9.49127 12.3903L11.1963 13.7535L11.9083 13.6627L14.295 \
+       10.4811L13.4942 9.88148L11.417 12.65Z\"/><path fill-rule=\"evenodd\" \
+       clip-rule=\"evenodd\" d=\"M3.49908 0.999641C3.84001 0.99384 4.18151 1.0586 \
+       4.49713 1.18909C4.79914 1.31384 5.07482 1.49726 5.3067 1.72913C5.53843 1.96097 \
+       5.72206 2.23778 5.84674 2.53968C5.97918 2.85529 6.04295 3.19681 6.03521 \
+       3.53968C6.03714 4.03278 5.89107 4.5171 5.61627 4.92835C5.34342 5.33945 4.95306 \
+       5.66118 4.49713 5.85023C4.35138 5.90961 4.04935 5.98536 4.03912 \
+       5.98792V10.9957C4.19682 11.0269 4.35111 11.0741 4.49908 11.1364C4.95503 11.3274 \
+       5.34344 11.6471 5.61822 12.0582C5.89095 12.4694 6.03709 12.953 6.03717 \
+       13.4459C6.04494 13.7889 5.98021 14.1302 5.84771 14.4459C5.72299 14.748 5.54053 \
+       15.0236 5.30865 15.2555C5.07869 15.4874 4.80113 15.6708 4.49908 15.7955C4.18349 \
+       15.928 3.84193 15.9918 3.49908 15.984C3.00611 15.9859 2.52255 15.8397 2.11138 \
+       15.5651C1.7002 15.2922 1.37859 14.9019 1.18951 14.4459C1.00248 13.9879 0.953409 \
+       13.4849 1.04888 12.9996C1.14443 12.5144 1.38069 12.0682 1.72955 11.7174C2.0784 \
+       11.3745 2.51872 11.1381 2.9981 11.0367V5.94984C2.52076 5.84654 2.08032 5.61201 \
+       1.72955 5.26917C1.38068 4.91835 1.14442 4.47126 1.04888 3.98597C0.951551 3.50075 \
+       1.0005 2.99761 1.18951 2.53968C1.37858 2.08378 1.70029 1.69434 2.11138 \
+       1.42152C2.52063 1.14678 3.00412 0.999693 3.49908 0.999641ZM3.53814 \
+       11.9996C3.24199 11.9997 2.95358 12.086 2.70806 12.2496C2.46063 12.4172 2.26547 \
+       12.6527 2.14849 12.9293C2.03739 13.2022 2.00994 13.5012 2.06842 13.7897C2.12498 \
+       14.0798 2.26731 14.3488 2.4776 14.5592C2.68808 14.7696 2.95583 14.9119 3.2481 \
+       14.9684C3.53643 15.0267 3.83475 14.9993 4.10748 14.8883C4.38407 14.7714 4.62059 \
+       14.5771 4.78814 14.3297C4.93819 14.1036 5.0235 13.8399 5.03717 13.569C5.04883 \
+       13.2982 4.98797 13.0293 4.85943 12.7897C4.73089 12.5501 4.54033 12.349 4.30865 \
+       12.2106C4.07678 12.0703 3.80898 11.9958 3.53814 11.9996ZM4.10748 2.1012C3.8348 \
+       1.99021 3.53637 1.96282 3.2481 2.02113C2.95771 2.07765 2.6881 2.22082 2.4776 \
+       2.43128C2.26727 2.64174 2.12492 2.90859 2.06842 3.20081C2.00998 3.48919 2.03749 \
+       3.78738 2.14849 4.06019C2.26546 4.33688 2.46058 4.57326 2.70806 4.74085C2.95548 \
+       4.90243 3.24403 4.98984 3.53814 4.98988C3.80898 4.98982 4.07678 4.9163 4.30865 \
+       4.77991C4.54038 4.63962 4.73085 4.44036 4.85943 4.20081C4.98799 3.96121 5.0507 \
+       3.69228 5.03717 3.42152C5.02353 3.15069 4.93811 2.88682 4.78814 2.66077C4.62057 \
+       2.41331 4.38414 2.21817 4.10748 2.1012Z\"/><path d=\"M9.95709 1.72132L8.68853 \
+       2.99085H10.5381C10.8655 2.98895 11.1912 3.05269 11.4952 3.17738C11.799 3.30209 \
+       12.0758 3.48759 12.3077 3.71937C12.5394 3.95117 12.725 4.22805 12.8497 \
+       4.53187C12.9743 4.83381 13.0391 5.1597 13.0372 5.4889V7.10804C12.7136 7.03978 \
+       12.3785 7.00201 12.0352 6.99964V5.4889C12.0351 5.09164 11.877 4.70987 11.5967 \
+       4.42933C11.3161 4.14871 10.9337 3.98996 10.5362 3.98988H8.68658L9.95514 \
+       5.25941L9.24615 5.96839L7.11724 3.84046V3.14027L9.2481 1.00941L9.95709 \
+       1.72132Z\"/>"
     | Git_pull_request_draft ->
       "<path d=\"M4.49705 5.8497C4.95319 5.66062 5.34304 5.33899 5.61594 4.92769C5.89079 \
        4.51639 6.03699 4.03296 6.03504 3.5398C6.04284 3.19672 5.97851 2.8556 5.84596 \
@@ -3034,27 +3458,31 @@ module T = struct
        cx=\"12.5543\" cy=\"7.75073\" r=\"1\"/><circle cx=\"12.5543\" cy=\"3.50146\" \
        r=\"1\"/>"
     | Git_pull_request_go_to_changes ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.99994 10V14L3.99994 \
-       15H12.9999L13.9999 14V5L13.7099 4.29L10.7099 1.29L9.99994 1H8V2H9.99994L12.9999 \
-       5V14H3.99994V10H2.99994ZM11 6H9V4H8V6H6V7H8V9H9V7H11V6ZM6 11H11V12H6V11Z\"/><path \
-       fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.06065 3.85356L4.91421 6L4.2071 \
-       5.29289L5.49999 4H2.5C2.10218 4 1.72064 4.15804 1.43934 4.43934C1.15804 4.72065 1 \
-       5.10218 1 5.5C1 5.89783 1.15804 6.27936 1.43934 6.56066C1.72064 6.84197 2.10218 7 \
-       2.5 7H3V8H2.5C1.83696 8 1.20107 7.73661 0.732233 7.26777C0.263392 6.79893 0 \
-       6.16305 0 5.5C0 4.83696 0.263392 4.20108 0.732233 3.73224C1.20107 3.2634 1.83696 \
-       3 2.5 3H5.49999L4.2071 1.70711L4.91421 1L7.06065 3.14645L7.06065 3.85356Z\"/>"
+      "<path d=\"M10.7099 1.29004L13.7099 4.29004L13.9999 5V14L12.9999 \
+       15H2.99994L1.99994 14V9H2.99994V14H12.9999V5L9.99994 2H8.05951V1.73633L7.99994 \
+       1.67676V1H9.99994L10.7099 1.29004ZM9.99994 12H4.99994V11H9.99994V12ZM7.99994 \
+       6H9.99994V7H7.99994V9H6.99994V7H5.06439L6.06439 6H6.99994V5.06348L7.99994 \
+       4.06348V6Z\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.06065 \
+       2.85356L4.91421 5L4.2071 4.29289L5.49999 3H2.5C2.10218 3 1.72064 3.15804 1.43934 \
+       3.43934C1.15804 3.72065 1 4.10218 1 4.5C1 4.89783 1.15804 5.27936 1.43934 \
+       5.56066C1.72064 5.84197 2.10218 6 2.5 6H3V7H2.5C1.83696 7 1.20107 6.73661 \
+       0.732233 6.26777C0.263392 5.79893 0 5.16305 0 4.5C0 3.83696 0.263392 3.20108 \
+       0.732233 2.73224C1.20107 2.2634 1.83696 2 2.5 2H5.49999L4.2071 0.707107L4.91421 \
+       0L7.06065 2.14645L7.06065 2.85356Z\"/>"
     | Git_pull_request_new_changes ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.7099 4.29L10.7099 \
-       1.29L9.99994 1H3.99994L2.99994 2V14L3.99994 15H9.35418C9.03018 14.714 8.75287 \
-       14.3764 8.53513 14H3.99994V2H9.99994L12.9999 5V8.126C13.3547 8.21731 13.6904 \
-       8.35606 13.9999 8.53509V5L13.7099 4.29ZM8.12602 11H6V12H8C8 11.6547 8.04375 \
-       11.3196 8.12602 11ZM6 6H8V4H9V6H11V7H9V9H8V7H6V6Z\"/><path d=\"M12 9C11.4067 9 \
-       10.8266 9.17595 10.3333 9.50559C9.83994 9.83524 9.45543 10.3038 9.22836 \
-       10.8519C9.0013 11.4001 8.94189 12.0033 9.05765 12.5853C9.1734 13.1672 9.45912 \
-       13.7018 9.87868 14.1213C10.2982 14.5409 10.8328 14.8266 11.4147 14.9424C11.9967 \
-       15.0581 12.5999 14.9987 13.1481 14.7716C13.6962 14.5446 14.1648 14.1601 14.4944 \
-       13.6667C14.8241 13.1734 15 12.5933 15 12C14.999 11.2047 14.6826 10.4422 14.1202 \
-       9.87976C13.5578 9.31736 12.7954 9.00098 12 9Z\"/>"
+      "<path d=\"M10.7099 1.28906L13.7099 4.28906L13.9999 4.99902V8.53613C13.6903 \
+       8.35697 13.3549 8.21733 12.9999 8.12598V4.99902L9.99994 \
+       1.99902H2.99994V13.999H8.53607C8.75376 14.3754 9.03049 14.713 9.35443 \
+       14.999H2.99994L1.99994 13.999V1.99902L2.99994 0.999023H9.99994L10.7099 \
+       1.28906Z\"/><path d=\"M8.12592 10.999C8.04358 11.3186 8.00002 11.6537 7.99994 \
+       11.999H4.99994V10.999H8.12592Z\"/><path d=\"M7.99994 \
+       5.99902H9.99994V6.99902H7.99994V9H6.99994V6.99902H4.99994V5.99902H6.99994V4H7.99994V5.99902Z\"/><path \
+       d=\"M12 9C11.4067 9 10.8266 9.17595 10.3333 9.50559C9.83994 9.83524 9.45543 \
+       10.3038 9.22836 10.8519C9.0013 11.4001 8.94189 12.0033 9.05765 12.5853C9.1734 \
+       13.1672 9.45912 13.7018 9.87868 14.1213C10.2982 14.5409 10.8328 14.8266 11.4147 \
+       14.9424C11.9967 15.0581 12.5999 14.9987 13.1481 14.7716C13.6962 14.5446 14.1648 \
+       14.1601 14.4944 13.6667C14.8241 13.1734 15 12.5933 15 12C14.999 11.2046 14.6826 \
+       10.4422 14.1202 9.87976C13.5578 9.31736 12.7954 9.00098 12 9Z\"/>"
     | Git_pull_request ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.616 4.928a2.487 2.487 0 \
        0 1-1.119.922c-.148.06-.458.138-.458.138v5.008a2.51 2.51 0 0 1 1.579 \
@@ -3142,37 +3570,32 @@ module T = struct
        10H7.022A8.943 8.943 0 0 0 8.5 12.644zM11.033 10a10.024 10.024 0 0 1-1.459 \
        2.893A5.517 5.517 0 0 0 13.393 10h-2.36z\"/>"
     | Go_to_editing_session ->
-      "<path d=\"M8 1.00006H3L2 2.00006V14.0001L3 15.0001H12L13 \
-       14.0001V6.81723H12V14.0001H3V2.00006H8V1.00006Z\"/><path d=\"M8 \
-       4.00006H7.00006V6.00006H5.00006V7.00006H7.00006V9.00006H8.00006V7.00006H10.0001V6.00008L8.00006 \
-       6.00006L8 4.00006Z\"/><path d=\"M5.00006 \
-       11.0001H10.0001V12.0001H5.00006V11.0001Z\"/><path d=\"M13.8703 0.482666L14.3724 \
-       0.984712V4.52025H13.3683V2.18679L10.2287 5.32635L9.5216 4.61924L12.6682 \
-       1.47262L10.3348 1.47262L10.3348 0.482666L13.8703 0.482666Z\"/>"
+      "<path d=\"M10.002 1H9V1.99902H3V13.999H13V6H14V13.999L13 14.999H3L2 \
+       13.999V1.99902L3 0.999023H10L10.002 1Z\"/><path d=\"M10 \
+       11.999H5V10.999H10V11.999Z\"/><path d=\"M8 5.99902L10 \
+       6V6.99902H8V9H7V6.99902H5V5.99902H7V4H8V5.99902Z\"/><path d=\"M14.5 \
+       0H11V1H13.293L10.646 3.646L11.354 4.354L14 1.707V4H15V0.5L14.5 0Z\"/>"
     | Go_to_file ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 \
-       5.914l2.06-2.06v-.708L5.915 1l-.707.707.043.043.25.25 1 1h-3a2.5 2.5 0 0 0 0 \
-       5H4V7h-.5a1.5 1.5 0 1 1 0-3h3L5.207 5.293 5.914 6 6 5.914zM11 \
-       2H8.328l-1-1H12l.71.29 3 3L16 5v9l-1 1H6l-1-1V6.5l1 .847V14h9V6h-4V2zm1 \
-       0v3h3l-3-3z\"/>"
+      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.5713 1.13965L13.8496 \
+       4.44141L14 4.7998V14.5L13.5 15H2.5L2 14.5V8H3V14H13V6H9.5L9 \
+       5.5V2H8V1H10.2197L10.5713 1.13965ZM10 5H13L10 2V5Z\"/><path d=\"M6.85352 \
+       2.14453V2.85156L4.85352 4.85156L4.14746 4.14453L5.29297 2.99902H2.5C1.673 2.99902 \
+       1 3.67202 1 4.49902C1.00001 5.32601 1.67301 5.99902 2.5 5.99902V6.99902C1.12201 \
+       6.99902 1.26736e-05 5.87801 0 4.49902C0 3.12002 1.122 1.99902 2.5 \
+       1.99902H5.29297L4.14746 0.852539L4.85352 0.146484L6.85352 2.14453Z\"/>"
     | Go_to_search ->
-      "<path d=\"M4.80005 10.15L1 13.84L1.75 14.5L5.53003 10.83L4.80005 10.15Z\"/><path \
-       d=\"M5.91418 6L8.06063 3.85356L8.06063 3.14645L5.91419 1L5.20708 1.70711L6.49997 \
-       3H3C1.61929 3 0.5 4.11929 0.5 5.5C0.5 6.76271 1.43615 7.80678 2.65227 \
-       7.97601C2.58806 7.66959 2.53498 7.31409 2.51211 6.91887C1.9232 6.71641 1.5 \
-       6.15763 1.5 5.5C1.5 4.67157 2.17157 4 3 4L6.49997 4L5.20708 5.29289L5.91418 \
-       6Z\"/><path d=\"M8.23663 2.02947L7.41223 1.20507C7.70346 1.12323 7.99962 1.06592 \
-       8.2977 1.03308C9.1038 0.944267 9.9239 1.03438 10.6981 1.30221C11.791 1.68027 \
-       12.7369 2.39318 13.4014 3.33962C14.0659 4.28606 14.4152 5.41787 14.3996 \
-       6.57418C14.384 7.73049 14.0043 8.85247 13.3145 9.78064C12.6248 10.7088 11.66 \
-       11.396 10.5573 11.7444C9.45461 12.0928 8.27017 12.0848 7.17229 11.7216C6.07442 \
-       11.3583 5.11898 10.6582 4.44178 9.7208C3.96202 9.05671 3.63921 8.29746 3.49175 \
-       7.5C3.4612 7.3348 3.43818 7.16797 3.42285 7H4.40833C4.49429 7.7722 4.7783 8.51224 \
-       5.23659 9.14662C5.79306 9.91689 6.57816 10.4922 7.48031 10.7907C8.38246 11.0892 \
-       9.35576 11.0958 10.2619 10.8095C11.1679 10.5231 11.9607 9.95849 12.5275 \
-       9.19579C13.0944 8.43308 13.4063 7.51113 13.4192 6.56096C13.432 5.61079 13.145 \
-       4.68075 12.5989 3.90304C12.0529 3.12532 11.2756 2.53951 10.3776 2.22885C9.68735 \
-       1.99008 8.95277 1.92319 8.23663 2.02947Z\"/>"
+      "<path d=\"M8 1.21289C10.305 1.86889 12 3.988 12 6.5C12 7.83697 11.5206 9.06359 \
+       10.7246 10.0176L15 14.293L14.293 15L10.0176 10.7246C9.06259 11.5196 7.83697 12 \
+       6.5 12C3.988 12 1.86789 10.305 1.21289 8H2.27637C2.8984 9.74194 4.54704 11 6.5 \
+       11C8.981 11 11 8.981 11 6.5C11 4.54704 9.74194 2.8974 8 2.27637V1.21289Z\"/><path \
+       d=\"M7.06055 2.14648V2.85254L4.91504 4.99902L4.20801 4.29199L5.50098 \
+       2.99902H2.50098C2.10299 2.99903 1.72242 3.15748 1.44043 3.43848C1.15945 3.71947 \
+       1.00098 4.10104 1.00098 4.49902C1.00098 4.89701 1.15944 5.27758 1.44043 \
+       5.55957C1.72142 5.84056 2.10299 5.99902 2.50098 \
+       5.99902H3.00098V6.99902H2.50098C1.83799 6.99902 1.20239 6.73459 0.733398 \
+       6.2666C0.264406 5.79761 0.000982615 5.16201 0.000976562 4.49902C0.000976562 \
+       3.83604 0.265415 3.20044 0.733398 2.73145C1.20239 2.26245 1.83799 1.99903 2.50098 \
+       1.99902H5.50098L4.20801 0.706055L4.91504 -0.000976562L7.06055 2.14648Z\"/>"
     | Grabber ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 6H1v1h14V6zm0 \
        3H1v1h14V9z\"/>"
@@ -3399,6 +3822,14 @@ module T = struct
        12.404v1.6h2v-1.5l.5-.5H6v-1.5l.5-.5h1.245l.876-1.016.561-.14a3.47 3.47 0 0 0 \
        1.269.238 3.568 3.568 0 0 0 2.218-.795zm-.838-2.732a1 1 0 1 0-1.662-1.11 1 1 0 0 \
        0 1.662 1.11z\"/>"
+    | Keyboard_tab_above ->
+      "<path d=\"M9 3.146L14 8.146V8.853L9 13.853L8.293 13.146L12.439 9H5C3.346 9 2 \
+       7.654 2 6V3H3V6C3 7.103 3.897 8 5 8H12.439L8.293 3.854L9 3.147V3.146ZM15 \
+       3V14H16V3H15Z\"/>"
+    | Keyboard_tab_below ->
+      "<path d=\"M9 3.146L14 8.146V8.853L9 13.853L8.293 13.146L12.439 9H5C3.897 9 3 \
+       9.897 3 11V14H2V11C2 9.346 3.346 8 5 8H12.439L8.293 3.854L9 3.146ZM15 \
+       3V14H16V3H15Z\"/>"
     | Keyboard_tab ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.00001 13.8871L14 \
        8.88711V8.18L9.00001 3.18L8.2929 3.88711L12.4393 8.03355L2 8.03355L2 \
@@ -3464,6 +3895,10 @@ module T = struct
     | Layout_panel_center ->
       "<path d=\"M2 1L1 2V14L2 15H14L15 14V2L14 1H2ZM2 14V2H4V14H2ZM5 10V2H11V10H5ZM12 \
        2H14V14H12V2Z\"/>"
+    | Layout_panel_dock ->
+      "<path d=\"M15 2V14L14 15H2L1 14V2L2 1H14L15 2ZM2 10H14V2H2V10Z\"/><path d=\"M8.5 \
+       3V7.29297L9.64648 6.14648L10.3535 6.85352L8.35352 8.85352H7.64648L5.64648 \
+       6.85352L6.35352 6.14648L7.5 7.29297V3H8.5Z\"/>"
     | Layout_panel_justify ->
       "<path d=\"M2 1L1 2V14L2 15H14L15 14V2L14 1H2ZM2 10V2H4V10H2ZM5 10V2H11V10H5ZM12 \
        10V2H14V10H12Z\"/>"
@@ -3477,12 +3912,20 @@ module T = struct
     | Layout_panel ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 1L1 2V14L2 15H14L15 \
        14V2L14 1H2ZM2 10V2H14V10H2Z\"/>"
+    | Layout_sidebar_left_dock ->
+      "<path d=\"M15 2V14L14 15H2L1 14V2L2 1H14L15 2ZM7 14H14V2H7V14Z\"/><path d=\"M13 \
+       7.5H9.70703L10.8535 6.35351L10.1465 5.64648L8.14648 7.64648V8.35351L10.1465 \
+       10.3535L10.8535 9.64648L9.70703 8.5H13V7.5Z\"/>"
     | Layout_sidebar_left_off ->
       "<path d=\"M2 1.00073L1 2.00073V14.0007L2 15.0007H14L15 14.0007V2.00073L14 \
        1.00073H2ZM2 14.0007V2.00073H6V14.0007H2ZM7 14.0007V2.00073H14V14.0007H7Z\"/>"
     | Layout_sidebar_left ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 1L1 2V14L2 15H14L15 \
        14V2L14 1H2ZM14 14H7V2H14V14Z\"/>"
+    | Layout_sidebar_right_dock ->
+      "<path d=\"M15 2V14L14 15H2L1 14V2L2 1H14L15 2ZM2 14H9V2H2V14Z\"/><path d=\"M3 \
+       7.5H6.29297L5.14648 6.35352L5.85352 5.64648L7.85352 7.64648V8.35352L5.85352 \
+       10.3535L5.14648 9.64648L6.29297 8.5H3V7.5Z\"/>"
     | Layout_sidebar_right_off ->
       "<path d=\"M2 1.00073L1 2.00073V14.0007L2 15.0007H14L15 14.0007V2.00073L14 \
        1.00073H2ZM2 14.0007V2.00073H9V14.0007H2ZM10 14.0007V2.00073H14V14.0007H10Z\"/>"
@@ -3528,40 +3971,47 @@ module T = struct
        10.1834 12.8947L10.9743 9.9945C10.9996 9.9019 11.0586 9.80352 11.1554 \
        9.70834C11.9848 8.89258 12.5 7.75601 12.5 6.5C12.5 4.01472 10.4853 2 8 2Z\"/>"
     | Lightbulb_sparkle ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.96712 9.60787C9.14342 \
-       9.26307 9.37775 8.94649 9.67076 8.65806C9.85736 8.47395 10.0257 8.28064 10.1757 \
-       8.07816C10.2158 7.96017 10.2532 7.8333 10.2873 7.69683C10.3615 7.40021 10.5382 \
-       7.15079 10.7739 6.98253C10.945 6.51978 11.0303 6.0252 11.0303 5.49953C11.0303 \
-       5.08664 10.9769 4.68802 10.8698 4.30397C10.763 3.92088 10.6112 3.56285 10.4143 \
-       3.23016C10.2177 2.89376 9.98251 2.5891 9.70882 2.31641C9.43513 2.0437 9.12939 \
-       1.80938 8.79183 1.61351C8.45803 1.41739 8.09883 1.2662 7.71451 1.15983C7.32923 \
-       1.0532 6.92934 1 6.51514 1C6.10094 1 5.70106 1.0532 5.31578 1.15983C4.93146 \
-       1.2662 4.56979 1.41764 4.23195 1.61364C3.89858 1.80953 3.59503 2.04383 3.32146 \
-       2.31641C3.04777 2.58911 2.81257 2.89377 2.61595 3.23018C2.41907 3.56286 2.26728 \
-       3.92089 2.16048 4.30397C2.05342 4.68802 2 5.08664 2 5.49953C2 6.11672 2.11756 \
-       6.69107 2.35361 7.22134C2.58896 7.75003 2.92468 8.22903 3.35953 8.65806C3.69832 \
-       8.99156 3.95683 9.36336 4.13553 9.77209C4.31772 10.1795 4.40927 10.622 4.40927 \
-       11.1009V12.7012C4.40927 12.8807 4.44311 13.0503 4.51141 13.2091C4.57895 13.3661 \
-       4.67168 13.5038 4.78961 13.6213C4.90753 13.7388 5.04564 13.8311 5.20306 \
-       13.8984C5.36223 13.9663 5.53223 14 5.71205 14H7.31823C7.49806 14 7.66806 13.9663 \
-       7.82723 13.8984C7.98464 13.8311 8.12275 13.7388 8.24068 13.6213C8.35861 13.5038 \
-       8.45134 13.3661 8.51887 13.2091C8.58718 13.0503 8.62102 12.8807 8.62102 \
-       12.7012V12.2734C8.61586 12.2723 8.61079 12.2712 8.60581 12.2701C8.54613 12.2576 \
-       8.50299 12.2525 8.48241 12.2506L8.47329 12.2498C8.1415 12.2429 7.8415 12.1066 \
-       7.62162 11.8894V12.7012C7.62162 12.7823 7.59309 12.8512 7.5314 12.9127C7.46971 \
-       12.9741 7.40022 13.0028 7.31823 13.0028H5.71205C5.63007 13.0028 5.56058 12.9741 \
-       5.49888 12.9127C5.4372 12.8512 5.40867 12.7823 5.40867 \
-       12.7012V10.5H7.35405C7.54359 10.0663 7.97213 9.76091 8.4732 9.75037L8.48232 \
-       9.7496C8.50289 9.74769 8.54604 9.74259 8.60572 9.73002C8.69843 9.7105 8.82494 \
-       9.67428 8.96712 9.60787Z\"/><path d=\"M11.5 14C12.25 11.0001 14.5 11.0001 14.5 \
-       11.0001C14.5 11.0001 12.25 11 11.5 8C10.75 11 8.5 11.0001 8.5 11.0001C8.5 11.0001 \
-       10.75 11 11.5 14Z\" stroke=\"#FFCC00\" stroke-width=\"0.75\" \
-       stroke-linejoin=\"round\"/><path d=\"M12.926 13.2393C13.2849 12.977 13.5538 \
-       12.6663 13.7328 12.4216C13.8545 12.2553 14.1455 12.2553 14.2672 12.4216C14.4462 \
-       12.6663 14.7151 12.977 15.074 13.2393C15.2403 13.3609 15.2403 13.6393 15.074 \
-       13.7609C14.7151 14.0231 14.4462 14.3337 14.2672 14.5784C14.1455 14.7447 13.8545 \
-       14.7447 13.7328 14.5784C13.5538 14.3337 13.2849 14.0231 12.926 13.7609C12.7597 \
-       13.6393 12.7597 13.3609 12.926 13.2393Z\"/>"
+      "<path d=\"M11.5 7.625C11.6721 7.625 11.8225 7.74224 11.8643 7.90918C12.2151 \
+       9.31225 12.9026 9.97683 13.4678 10.2998C13.7556 10.4642 14.022 10.5455 14.2139 \
+       10.5859C14.3096 10.6061 14.3863 10.6164 14.4365 10.6211C14.4616 10.6234 14.4803 \
+       10.6245 14.4912 10.625H14.5C14.7071 10.625 14.875 10.7929 14.875 11C14.8749 \
+       11.207 14.707 11.375 14.5 11.375H14.4912C14.4803 11.3755 14.4616 11.3766 14.4365 \
+       11.3789C14.3863 11.3836 14.3097 11.3939 14.2139 11.4141C14.022 11.4545 13.7556 \
+       11.5358 13.4678 11.7002C12.9026 12.0232 12.2151 12.6877 11.8643 14.0908C11.8224 \
+       14.2576 11.672 14.375 11.5 14.375C11.328 14.375 11.1776 14.2576 11.1357 \
+       14.0908C10.7849 12.6877 10.0974 12.0232 9.53223 11.7002C9.24439 11.5358 8.97799 \
+       11.4545 8.78613 11.4141C8.69032 11.3939 8.61374 11.3836 8.56348 11.3789C8.53839 \
+       11.3766 8.51968 11.3755 8.50879 11.375H8.5L8.4248 11.3672C8.25385 11.3324 8.12512 \
+       11.1812 8.125 11C8.12505 10.7929 8.29293 10.625 8.5 10.625H8.50879C8.51968 \
+       10.6245 8.53839 10.6234 8.56348 10.6211C8.61373 10.6164 8.69035 10.6061 8.78613 \
+       10.5859C8.97798 10.5455 9.24441 10.4642 9.53223 10.2998C10.0974 9.97683 10.7849 \
+       9.31225 11.1357 7.90918C11.1775 7.74224 11.3279 7.625 11.5 7.625Z\"/><path \
+       d=\"M6.51562 1C6.92965 1.00004 7.32972 1.05259 7.71484 1.15918C8.09908 1.26555 \
+       8.45825 1.4172 8.79199 1.61328C9.12951 1.80914 9.43533 2.04374 9.70898 \
+       2.31641C9.98246 2.58893 10.2175 2.89334 10.4141 3.22949C10.6109 3.56217 10.7633 \
+       3.92062 10.8701 4.30371C10.9771 4.68766 11.0303 5.08625 11.0303 5.49902C11.0303 \
+       6.02569 10.9433 6.52088 10.7715 6.98438C10.5371 7.15257 10.361 7.40085 10.2871 \
+       7.69629C10.2532 7.83192 10.2146 7.95782 10.1748 8.0752C10.0246 8.27816 9.85791 \
+       8.47369 9.6709 8.6582C9.37851 8.94605 9.14394 9.26148 8.96777 9.60547C8.82504 \
+       9.67228 8.69848 9.70991 8.60547 9.72949C8.54601 9.742 8.50303 9.7471 8.48242 \
+       9.74902C8.47873 9.74937 8.47571 9.74984 8.47363 9.75C7.97269 9.76054 7.54508 \
+       10.0665 7.35547 10.5H5.4082V12.7012C5.40825 12.7821 5.43744 12.8507 5.49902 \
+       12.9121C5.56069 12.9736 5.62999 13.0029 5.71191 13.0029H7.31836C7.40029 13.0029 \
+       7.46958 12.9736 7.53125 12.9121C7.59283 12.8507 7.62203 12.7821 7.62207 \
+       12.7012V11.8877C7.84199 12.1052 8.14157 12.243 8.47363 12.25C8.47571 12.2502 \
+       8.4787 12.2497 8.48242 12.25C8.50295 12.2519 8.54599 12.257 8.60547 \
+       12.2695C8.61048 12.2706 8.61589 12.2723 8.62109 12.2734V12.7012C8.62107 12.8806 \
+       8.58683 13.0502 8.51855 13.209C8.45103 13.3659 8.35811 13.5036 8.24023 \
+       13.6211C8.12236 13.7385 7.98446 13.8313 7.82715 13.8984C7.66807 13.9663 7.49807 \
+       14 7.31836 14H5.71191C5.5322 14 5.36221 13.9663 5.20312 13.8984C5.04581 13.8313 \
+       4.90791 13.7385 4.79004 13.6211C4.67216 13.5036 4.57925 13.3659 4.51172 \
+       13.209C4.44344 13.0502 4.4092 12.8806 4.40918 12.7012V11.1006C4.40918 10.6218 \
+       4.31793 10.1789 4.13574 9.77148C3.95706 9.36289 3.69804 8.99161 3.35938 \
+       8.6582C2.92453 8.22917 2.58887 7.7494 2.35352 7.2207C2.11757 6.69054 2 6.11608 2 \
+       5.49902C2.00002 5.08625 2.05313 4.68766 2.16016 4.30371C2.26695 3.92063 2.41933 \
+       3.56217 2.61621 3.22949C2.81273 2.89334 3.04781 2.58893 3.32129 2.31641C3.59486 \
+       2.04382 3.89906 1.80917 4.23242 1.61328C4.57008 1.41743 4.93135 1.2655 5.31543 \
+       1.15918C5.70071 1.05254 6.10142 1 6.51562 1Z\"/>"
     | Lightbulb ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.67 8.658a3.661 3.661 0 \
        0 0-.781 1.114 3.28 3.28 0 0 0-.268 1.329v1.6a1.304 1.304 0 0 1-.794 1.197 1.282 \
@@ -3806,10 +4256,15 @@ module T = struct
        13.31V2.73L4.85 5.85 4.5 6H2v4h2.5l.35.17zm9.381-4.108l.707.707L13.207 8.5l1.731 \
        1.732-.707.707L12.5 9.207l-1.732 1.732-.707-.707L11.793 8.5 10.06 6.77l.707-.707 \
        1.733 1.73 1.731-1.731z\"/>"
+    | New_collection ->
+      "<path d=\"M13 12H16V13H13V16H12V13H9V12H12V9H13V12Z\"/><path \
+       fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.5 1L15 1.5V8H14V2H8V5H11.5L12 \
+       5.5V8H11V6H5V14H8V15H4.5L4 14.5V13H1.5L1 12.5V3.5L1.5 3H7V1.5L7.5 1H14.5ZM2 \
+       4V12H4V5.5L4.5 5H7V4H2Z\"/>"
     | New_file ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.5 1.1l3.4 \
-       3.5.1.4v2h-1V6H8V2H3v11h4v1H2.5l-.5-.5v-12l.5-.5h6.7l.3.1zM9 2v3h2.9L9 2zm4 \
-       14h-1v-3H9v-1h3V9h1v3h3v1h-3v3z\"/>"
+      "<path d=\"M13 9V12H16V13H13V16H12V13H9V12H12V9H13Z\"/><path fill-rule=\"evenodd\" \
+       clip-rule=\"evenodd\" d=\"M10.5703 1.13965L13.8496 4.44043L14 4.7998V8H13V6H9.5L9 \
+       5.5V2H3V14H8V15H2.5L2 14.5V1.5L2.5 1H10.2197L10.5703 1.13965ZM10 5H13L10 2V5Z\"/>"
     | New_folder ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.5 2H7.71l-.85-.85L6.51 \
        1h-5l-.5.5v11l.5.5H7v-1H1.99V6h4.49l.35-.15.86-.86H14v1.5l-.001.51h1.011V2.5L14.5 \
@@ -3857,14 +4312,23 @@ module T = struct
        1.557s.473 1.566 1.05 1.566c.578 0 1.05-.7 1.05-1.566 \
        0-.866-.463-1.557-1.05-1.557z\"/>"
     | Open_preview ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 1h11l1 1v5.3a3.21 3.21 0 \
-       0 0-1-.3V2H9v10.88L7.88 14H3l-1-1V2l1-1zm0 12h5V2H3v11zm10.379-4.998a2.53 2.53 0 \
-       0 0-1.19.348h-.03a2.51 2.51 0 0 0-.799 3.53L9 14.23l.71.71 \
-       2.35-2.36c.325.22.7.358 1.09.4a2.47 2.47 0 0 0 1.14-.13 2.51 2.51 0 0 0 1-.63 \
-       2.46 2.46 0 0 0 .58-1 2.63 2.63 0 0 0 .07-1.15 2.53 2.53 0 0 0-1.35-1.81 2.53 \
-       2.53 0 0 0-1.211-.258zm.24 3.992a1.5 1.5 0 0 1-.979-.244 1.55 1.55 0 0 1-.56-.68 \
-       1.49 1.49 0 0 1-.08-.86 1.49 1.49 0 0 1 1.18-1.18 1.49 1.49 0 0 1 \
-       .86.08c.276.117.512.311.68.56a1.5 1.5 0 0 1-1.1 2.324z\"/>"
+      "<path d=\"M3.59561 9.002C3.17661 8.986 2.76061 9.075 2.38461 9.26C2.03261 9.436 \
+       1.72661 9.693 1.49361 10.01C1.26061 10.323 1.10361 10.686 1.03361 11.071C0.971609 \
+       11.455 0.995609 11.847 1.10361 12.22C1.21461 12.595 1.41361 12.937 1.68361 \
+       13.22C1.96161 13.507 2.30461 13.723 2.68361 13.85C3.04761 13.983 3.43861 14.027 \
+       3.82361 13.98C4.21461 13.938 4.58961 13.801 4.91461 13.581L7.26461 15.94L7.97461 \
+       15.23L5.61461 12.88C5.80061 12.598 5.92861 12.281 5.98861 11.948C6.04861 11.615 \
+       6.04061 11.274 5.96661 10.944C5.89161 10.614 5.75161 10.303 5.55361 \
+       10.029C5.35561 9.755 5.10461 9.524 4.81561 9.349H4.78561C4.42461 9.137 4.01561 \
+       9.017 3.59761 9.001L3.59561 9.002ZM2.97461 2L1.97461 3V8.3C2.28961 8.146 2.62761 \
+       8.045 2.97461 8V3H7.97461V13.88L9.09461 15H13.9746L14.9746 14V3L13.9746 \
+       2H2.97461ZM13.9746 3V14H8.97461V3H13.9746ZM2.93461 10.11C3.20661 9.999 3.50661 \
+       9.971 3.79461 10.03C4.08661 10.087 4.35461 10.229 4.56561 10.439C4.77561 10.649 \
+       4.91861 10.918 4.97461 11.21C5.03361 11.498 5.00561 11.798 4.89461 12.07C4.77761 \
+       12.346 4.58361 12.582 4.33561 12.75C4.04661 12.942 3.70061 13.028 3.35461 \
+       12.994C3.00961 12.96 2.68761 12.807 2.44261 12.562C2.19761 12.317 2.04461 11.994 \
+       2.00961 11.649C1.97561 11.304 2.06261 10.958 2.25461 10.67C2.42261 10.422 2.65861 \
+       10.227 2.93461 10.11Z\"/>"
     | Organization ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.111 4.663A2 2 0 1 1 6.89 \
        1.337a2 2 0 0 1 2.222 3.326zm-.555-2.494A1 1 0 1 0 7.444 3.83a1 1 0 0 0 \
@@ -4305,10 +4769,12 @@ module T = struct
        1h13l.5.5v10l-.5.5H7.707l-2.853 2.854L4 14.5V12H1.5l-.5-.5v-10l.5-.5zm6 \
        10H14V2H2v9h2.5l.5.5v1.793l2.146-2.147L7.5 11zm0-8h1v5h-1V3zm0 7h1V9h-1v1z\"/>"
     | Request_changes ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.7099 1.29L13.7099 \
-       4.29L13.9999 5V14L12.9999 15H3.99994L2.99994 14V2L3.99994 1H9.99994L10.7099 \
-       1.29ZM3.99994 14H12.9999V5L9.99994 2H3.99994V14ZM8 6H6V7H8V9H9V7H11V6H9V4H8V6ZM6 \
-       11H11V12H6V11Z\"/>"
+      "<path d=\"M9.99994 11.999H4.99994V10.999H9.99994V11.999Z\"/><path d=\"M7.99994 \
+       5.99902H9.99994V6.99902H7.99994V9H6.99994V6.99902H4.99994V5.99902H6.99994V4H7.99994V5.99902Z\"/><path \
+       fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.7099 1.28906L13.7099 \
+       4.28906L13.9999 4.99902V13.999L12.9999 14.999H2.99994L1.99994 \
+       13.999V1.99902L2.99994 0.999023H9.99994L10.7099 1.28906ZM2.99994 \
+       13.999H12.9999V4.99902L9.99994 1.99902H2.99994V13.999Z\"/>"
     | Robot ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 8C8 9.10457 7.10457 10 6 \
        10C4.89543 10 4 9.10457 4 8C4 6.89543 4.89543 6 6 6C7.10457 6 8 6.89543 8 8ZM5 \
@@ -4427,31 +4893,79 @@ module T = struct
        3v11.5l-.5.5h-13l-.5-.5v-13l.5-.5H13l.353.146zM2 2v12h12V3.208L12.793 \
        2H11v4H4V2H2zm6 0v3h2V2H8z\"/>"
     | Screen_full ->
-      "<path d=\"M3 12h10V4H3v8zm2-6h6v4H5V6zM2 \
-       6H1V2.5l.5-.5H5v1H2v3zm13-3.5V6h-1V3h-3V2h3.5l.5.5zM14 \
-       10h1v3.5l-.5.5H11v-1h3v-3zM2 13h3v1H1.5l-.5-.5V10h1v3z\"/>"
+      "<path d=\"M2.5 2H6V3H3V6H2V2.5L2.5 2ZM3 10H2V13.5L2.5 14H6V13H3V10ZM13 \
+       13H10V14H13.5L14 13.5V10H13V13ZM13.5 2H10V3H13V6H14V2.5L13.5 2Z\"/>"
     | Screen_normal ->
-      "<path d=\"M3.5 4H1V3h2V1h1v2.5l-.5.5zM13 3V1h-1v2.5l.5.5H15V3h-2zm-1 \
-       9.5V15h1v-2h2v-1h-2.5l-.5.5zM1 \
-       12v1h2v2h1v-2.5l-.5-.5H1zm11-1.5l-.5.5h-7l-.5-.5v-5l.5-.5h7l.5.5v5zM10 \
-       7H6v2h4V7z\"/>"
+      "<path d=\"M5 2H6V5.5L5.5 6H2V5H5V2ZM2 10V11H5V14H6V10.5L5.5 10H2ZM10 \
+       10.5V14H11V11H14V10H10.5L10 10.5ZM11 5V2H10V5.5L10.5 6H14V5H11Z\"/>"
     | Search_fuzzy ->
-      "<path d=\"M8 1.5C5.51472 1.5 3.5 3.51472 3.5 6C3.5 7.20114 3.9706 8.29237 4.73749 \
-       9.09937L1.04291 12.7939L1.75001 13.5011L5.5053 9.74577C6.2193 10.2222 7.07721 \
-       10.5 8 10.5C10.4853 10.5 12.5 8.48528 12.5 6C12.5 3.51472 10.4853 1.5 8 1.5ZM4.5 \
-       6C4.5 4.067 6.067 2.5 8 2.5C9.933 2.5 11.5 4.067 11.5 6C11.5 7.933 9.933 9.5 8 \
-       9.5C6.067 9.5 4.5 7.933 4.5 6Z\"/><path d=\"M8.99998 13.8546L6.85353 \
-       16.0011H6.14642L4.64642 14.5011L5.35353 13.7939L6.49998 14.9404L8.64642 \
-       12.7939H9.35353L11.5 14.9404L13.6464 12.7939H14.3535L16 14.4404V15.8546L14 \
-       13.8546L11.8535 16.0011H11.1464L8.99998 13.8546Z\"/>"
+      "<path d=\"M6.5 14.793L8.14648 13.1465H8.85352L10.8535 15.1465L10.1465 15.8535L8.5 \
+       14.207L6.85352 15.8535H6.14648L4.5 14.207L2.85352 15.8535H2.14551L0.145508 \
+       13.8535L0.853516 13.1465L2.5 14.793L4.14648 13.1465H4.85352L6.5 14.793Z\"/><path \
+       fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.5 1C9.533 1 12 3.468 12 6.5C12 \
+       7.83697 11.5206 9.06359 10.7246 10.0176L15 14.293L14.293 15L10.0176 \
+       10.7246C9.06259 11.5196 7.83697 12 6.5 12C3.467 12 1 9.532 1 6.5C1 3.468 3.467 1 \
+       6.5 1ZM6.5 2C4.019 2 2 4.019 2 6.5C2 8.981 4.019 11 6.5 11C8.981 11 11 8.981 11 \
+       6.5C11 4.019 8.981 2 6.5 2Z\"/>"
+    | Search_sparkle ->
+      "<path d=\"M16.002 8.50198C16.002 8.56398 15.982 8.62498 15.946 8.67598C15.91 \
+       8.72698 15.859 8.76498 15.8 8.78598L15.035 9.03498C14.802 9.11198 14.59 9.24298 \
+       14.417 9.41598C14.244 9.58898 14.113 9.79998 14.036 10.033L13.787 10.798C13.766 \
+       10.857 13.727 10.908 13.676 10.944C13.625 10.981 13.564 11 13.501 11C13.438 11 \
+       13.377 10.98 13.326 10.944C13.274 10.908 13.236 10.857 13.215 10.798L12.966 \
+       10.033C12.889 9.79998 12.758 9.58798 12.585 9.41398C12.412 9.23998 12.2 9.10898 \
+       11.967 9.03098L11.202 8.78198C11.143 8.76198 11.092 8.72298 11.056 8.67198C11.019 \
+       8.62098 11 8.55998 11 8.49798C11 8.43598 11.02 8.37498 11.056 8.32398C11.092 \
+       8.27298 11.143 8.23498 11.202 8.21398L11.967 7.96498C12.197 7.88598 12.405 \
+       7.75398 12.576 7.58098C12.747 7.40798 12.875 7.19798 12.951 6.96698L13.2 \
+       6.20198C13.22 6.14298 13.258 6.09098 13.309 6.05598C13.36 6.01998 13.422 6.00098 \
+       13.485 6.00098C13.548 6.00098 13.609 6.01998 13.66 6.05598C13.711 6.09198 13.748 \
+       6.14298 13.769 6.20198L14.018 6.96698C14.095 7.19898 14.227 7.41098 14.4 \
+       7.58398C14.574 7.75698 14.784 7.88798 15.017 7.96498L15.783 8.21398L15.798 \
+       8.21798C15.857 8.23798 15.908 8.27698 15.944 8.32798H15.946C15.983 8.37798 16.002 \
+       8.43998 16.002 8.50198ZM10.918 9.74198L10.892 9.73398C10.628 9.64598 10.399 \
+       9.47498 10.241 9.25298C10.207 9.20698 10.19 9.14898 10.163 9.09798C9.347 10.246 \
+       8.013 11.002 6.5 11.002C4.019 11.002 2 8.98298 2 6.50198C2 4.02098 4.019 2.00098 \
+       6.5 2.00098C6.742 2.00098 6.974 2.03498 7.206 2.07198L8.044 1.79898C8.202 1.74398 \
+       8.363 1.64298 8.492 1.51198C8.522 1.48098 8.545 1.44298 8.572 1.40898C7.932 \
+       1.14698 7.233 0.999977 6.499 0.999977C3.467 1.00098 1 3.46898 1 6.50098C1 9.53298 \
+       3.467 12.001 6.5 12.001C7.837 12.001 9.063 11.521 10.018 10.726L14.293 15.001L15 \
+       14.294L10.725 10.019C10.797 9.93298 10.851 9.83298 10.918 9.74198ZM7.281 \
+       3.09898C7.198 3.12898 7.127 3.18298 7.076 3.25398C7.025 3.32498 6.998 3.41098 \
+       6.998 3.49798C6.998 3.58498 7.025 3.67098 7.076 3.74198C7.127 3.81398 7.198 \
+       3.86798 7.281 3.89698L8.352 4.24498C8.627 4.33698 8.881 4.48198 9.099 \
+       4.67098C9.139 4.70598 9.179 4.74298 9.217 4.78098C9.418 4.98198 9.578 5.21798 \
+       9.688 5.47898C9.711 5.53398 9.732 5.59098 9.75 5.64798L10.098 6.71798C10.124 \
+       6.79198 10.172 6.85798 10.233 6.90698C10.24 6.91298 10.247 6.91798 10.254 \
+       6.92298C10.326 6.97398 10.411 7.00098 10.499 7.00098C10.587 7.00098 10.673 \
+       6.97398 10.744 6.92298C10.816 6.87198 10.87 6.80098 10.899 6.71798L11.247 \
+       5.64798C11.355 5.32198 11.538 5.02598 11.781 4.78298C12.024 4.54098 12.32 4.35798 \
+       12.646 4.24998L13.717 3.90198C13.8 3.87198 13.871 3.81798 13.922 3.74698C13.973 \
+       3.67598 14 3.58998 14 3.50298C14 3.41598 13.973 3.32998 13.922 3.25898C13.871 \
+       3.18698 13.8 3.13298 13.717 3.10398L13.697 3.09898L12.625 2.75098C12.299 2.64298 \
+       12.003 2.46098 11.76 2.21798C11.517 1.97498 11.334 1.67998 11.226 1.35398L10.878 \
+       0.283977C10.849 0.200977 10.794 0.129977 10.723 0.0789766C10.651 0.0279766 10.566 \
+       0.000976562 10.478 0.000976562C10.39 0.000976562 10.306 0.0279766 10.234 \
+       0.0789766C10.162 0.129977 10.108 0.200977 10.079 0.283977L9.731 1.35398C9.624 \
+       1.67698 9.444 1.97198 9.206 2.21398C8.968 2.45598 8.675 2.63998 8.353 \
+       2.75098L7.281 3.09898Z\"/>"
     | Search_stop ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.738 3.318a4.5 4.5 0 0 \
-       0-.877 5.123A4.48 4.48 0 0 0 6.1 10a4.62 4.62 0 0 0-.1 \
-       1v.17c-.16-.11-.32-.22-.47-.34L1.75 14.5 1 13.84l3.8-3.69a5.5 5.5 0 1 1 \
-       9.62-3.65c0 .268-.02.535-.06.8a5.232 5.232 0 0 0-.94-.68V6.5a4.5 4.5 0 0 \
-       0-7.682-3.182zm3.04 4.356a4 4 0 1 1 4.444 6.652 4 4 0 0 1-4.444-6.652zm.1 5.447A3 \
-       3 0 0 0 11 14a3 3 0 0 0 1.74-.55L8.55 9.26A3 3 0 0 0 8 11a3 3 0 0 0 .879 \
-       2.121zm.382-4.57l4.19 4.189A3 3 0 0 0 14 11a3 3 0 0 0-3-3 3 3 0 0 0-1.74.55z\"/>"
+      "<path d=\"M4 8C1.794 8 0 9.794 0 12C0 14.206 1.794 16 4 16C6.206 16 8 14.206 8 \
+       12C8 9.794 6.206 8 4 8ZM4 15C2.346 15 1 13.654 1 12C1 11.353 1.207 10.754 1.556 \
+       10.263L5.737 14.444C5.246 14.794 4.647 15 4 15ZM6.444 13.737L2.263 9.556C2.754 \
+       9.206 3.353 9 4 9C5.654 9 7 10.346 7 12C7 12.647 6.793 13.246 6.444 13.737ZM15 \
+       14.293L14.293 15L10.018 10.725C9.692 10.997 9.324 11.216 8.941 11.408C8.899 \
+       11.057 8.824 10.72 8.713 10.396C10.072 9.621 11.001 8.175 11.001 6.501C11.001 \
+       4.02 8.982 2.001 6.501 2.001C4.02 2.001 2 4.019 2 6.5C2 6.802 2.032 7.097 2.089 \
+       7.383C1.768 7.516 1.464 7.682 1.181 7.876C1.067 7.435 1 6.976 1 6.5C1 3.468 3.467 \
+       1 6.5 1C9.533 1 12 3.468 12 6.5C12 7.837 11.52 9.063 10.725 10.018L15 14.293Z\"/>"
+    | Send_to_remote_agent ->
+      "<path d=\"M15.724 11.053V11.948L7.724 15.948L7.026 15.343L8.14 \
+       12.001H13V11.001H8.14L7.026 7.659L7.724 7.054L15.724 11.053ZM1 8C1 6.46 2.15 5.18 \
+       3.67 5.02L4.02 4.98L4.11 4.64C4.5 3.09 5.89 2 7.5 2C9.43 2 11 3.57 11 \
+       5.5V6H11.5C12.88 6 14 7.12 14 8.5V8.52L14.95 8.99C14.98 8.83 15 8.67 15 8.5C15 \
+       6.73 13.68 5.26 11.98 5.03C11.74 2.77 9.82 1 7.5 1C5.55 1 3.84 2.25 3.23 \
+       4.07C1.37 4.43 0 6.07 0 8C0 10.21 1.79 12 4 12H7V11H4C2.35 11 1 9.65 1 8Z\"/>"
     | Send ->
       "<path d=\"M1 1.91L1.78 1.5L15 7.44899V8.3999L1.78 14.33L1 13.91L2.58311 8L1 \
        1.91ZM3.6118 8.5L2.33037 13.1295L13.5 7.8999L2.33037 2.83859L3.6118 7.43874L9 \
@@ -4487,6 +5001,18 @@ module T = struct
        7H5v1H4V7H3v2h10V7h-2v1h-1V7H9v1H8V7H7v1H6V7zm7.5 \
        8l.5-.5v-3l-.5-.5h-11l-.5.5v3l.5.5h11zM3 \
        14v-2h1v1h1v-1h1v1h1v-1h1v1h1v-1h1v1h1v-1h2v2H3z\"/>"
+    | Settings_gear ->
+      "<path d=\"M15 6.59L12.574 6.106L13.947 4.048L11.952 2.053L9.9 3.426L9.41 \
+       1H6.59L6.106 3.426L4.048 2.053L2.053 4.053L3.426 6.106L1 6.59V9.41L3.426 \
+       9.9L2.053 11.952L4.053 13.947L6.111 12.574L6.59 15H9.41L9.9 12.574L11.957 \
+       13.947L13.952 11.952L12.574 9.9L15 9.41V6.59ZM14 8.59L11.641 9.062L11.325 \
+       9.823L12.661 11.823L11.826 12.658L9.826 11.322L9.066 11.638L8.59 14H7.41L6.938 \
+       11.641L6.177 11.325L4.177 12.661L3.342 11.826L4.678 9.826L4.362 9.066L2 \
+       8.59V7.41L4.359 6.938L4.675 6.177L3.339 4.177L4.174 3.342L6.174 4.678L6.934 \
+       4.362L7.41 2H8.59L9.062 4.359L9.823 4.675L11.823 3.339L12.658 4.174L11.322 \
+       6.174L11.638 6.934L14 7.41V8.59Z\"/><path d=\"M8 6C6.897 6 6 6.897 6 8C6 9.103 \
+       6.897 10 8 10C9.103 10 10 9.103 10 8C10 6.897 9.103 6 8 6ZM8 9C7.449 9 7 8.551 7 \
+       8C7 7.449 7.449 7 8 7C8.551 7 9 7.449 9 8C9 8.551 8.551 9 8 9Z\"/>"
     | Settings ->
       "<path d=\"M6 9.5C6.93191 9.5 7.71496 10.1374 7.93699 11H13.5C13.7761 11 14 \
        11.2239 14 11.5C14 11.7455 13.8231 11.9496 13.5899 11.9919L13.5 12L7.93673 \
@@ -4656,9 +5182,9 @@ module T = struct
        13.0707 12.0593 13.3784L12.0003 13.5594L11.9423 13.3784C11.8409 13.0702 11.6687 \
        12.7901 11.4394 12.5605C11.2102 12.3309 10.9303 12.1583 10.6223 12.0564Z\"/>"
     | Split_horizontal ->
-      "<path d=\"M14 1H3L2 2v11l1 1h11l1-1V2l-1-1zM8 13H3V2h5v11zm6 0H9V2h5v11z\"/>"
+      "<path d=\"M14 2H3L2 3V14L3 15H14L15 14V3L14 2ZM8 14H3V3H8V14ZM14 14H9V3H14V14Z\"/>"
     | Split_vertical ->
-      "<path d=\"M14 1H3L2 2v11l1 1h11l1-1V2l-1-1zm0 12H3V8h11v5zm0-6H3V2h11v5z\"/>"
+      "<path d=\"M14 2H3L2 3V14L3 15H14L15 14V3L14 2ZM14 14H3V9H14V14ZM14 8H3V3H14V8Z\"/>"
     | Squirrel ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.558 2.642a3.698 3.698 0 \
        0 0-.123-.01A1.47 1.47 0 0 0 3.999 1.52v1.307a4.898 4.898 0 0 0-2.993 \
@@ -4945,17 +5471,25 @@ module T = struct
        1.5zM5 9.71l1.5.9V9.28L5 8.38v1.33zm.58-2.15l1.45.87 3.39-1.5-1.45-.87-3.39 \
        1.5zm1.95 3.17l3.5-1.56v-1.4l-3.5 1.55v1.41z\"/>"
     | Sync_ignored ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.468 3.687l-.757-.706a6 6 \
-       0 0 1 9.285 4.799L15.19 6.6l.75.76-2.09 2.07-.76-.01L11 7.31l.76-.76 1.236 1.25a5 \
-       5 0 0 0-7.528-4.113zm4.55 8.889l.784.73a6 6 0 0 1-8.796-5.04L.78 9.5 0 \
-       8.73l2.09-2.07.76.01 2.09 2.12-.76.76-1.167-1.18a5 5 0 0 0 7.005 4.206z\"/><path \
-       d=\"M1.123 2.949l.682-.732L13.72 13.328l-.682.732z\"/>"
+      "<path d=\"M5.68897 3.568L4.95897 2.838C5.86797 2.302 6.90997 2 7.99997 2C11.241 2 \
+       13.889 4.582 13.996 7.797L15.146 6.647L15.853 7.354L13.853 9.354H13.146L11.146 \
+       7.354L11.853 6.647L12.995 7.789C12.884 5.13 10.686 3.001 7.99997 3.001C7.18097 \
+       3.001 6.39197 3.202 5.68897 3.568ZM7.99997 13C5.31397 13 3.11597 10.871 3.00497 \
+       8.212L4.14697 9.354L4.85397 8.647L2.85397 6.647H2.14697L0.146973 8.647L0.853973 \
+       9.354L2.00397 8.204C2.11197 11.419 4.75997 14.001 7.99997 14.001C9.08897 14.001 \
+       10.132 13.699 11.041 13.163L10.311 12.433C9.60797 12.8 8.81897 13.001 7.99997 \
+       13.001V13ZM1.64597 2.354L13.646 14.354L14.353 13.647L2.35397 1.646L1.64697 \
+       2.353L1.64597 2.354Z\"/>"
     | Sync ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.006 8.267L.78 9.5 0 \
-       8.73l2.09-2.07.76.01 2.09 2.12-.76.76-1.167-1.18a5 5 0 0 0 9.4 1.983l.813.597a6 6 \
-       0 0 1-11.22-2.683zm10.99-.466L11.76 6.55l-.76.76 2.09 2.11.76.01 \
-       2.09-2.07-.75-.76-1.194 1.18a6 6 0 0 0-11.11-2.92l.81.594a5 5 0 0 1 9.3 \
-       2.346z\"/>"
+      "<path d=\"M2.85352 6.64746L4.85352 8.64746L4.14746 9.35352L3.00488 \
+       8.21191C3.11588 10.8709 5.314 13 8 13C9.6739 13 11.2291 12.1683 12.1602 \
+       10.7734L12.9922 11.3281C11.8742 13.0011 10.008 14 7.99902 14C4.75907 14 2.11101 \
+       11.4181 2.00293 8.20312L0.852539 9.35254L0.145508 8.64551L2.14746 \
+       6.64746H2.85352Z\"/><path d=\"M8 1.99902C11.24 1.99905 13.888 4.58095 13.9961 \
+       7.7959L15.1455 6.64551L15.8525 7.35156L13.8525 9.35156H13.1455L11.1455 \
+       7.35156L11.8525 6.64453L12.9951 7.78711C12.8841 5.12812 10.686 2.99905 8 \
+       2.99902C6.3251 2.99902 4.76989 3.83173 3.83887 5.22559L3.00684 4.66992C4.12484 \
+       2.99792 5.991 1.99902 8 1.99902Z\"/>"
     | Table ->
       "<path d=\"M13.5 2h-12l-.5.5v11l.5.5h12l.5-.5v-11l-.5-.5zM2 3h11v1H2V3zm7 \
        4H6V5h3v2zm0 1v2H6V8h3zM2 5h3v2H2V5zm0 3h3v2H2V8zm0 5v-2h3v2H2zm4 0v-2h3v2H6zm7 \
@@ -5213,6 +5747,20 @@ module T = struct
        3.53l.78-2.14.78 2.14H3.21zM11.82 4h-1.6L7 13h1.56l.75-2.29h3.36l.77 \
        2.29H15l-3.18-9zM9.67 \
        9.5l1.18-3.59c.059-.185.1-.376.12-.57.027.192.064.382.11.57l1.25 3.59H9.67z\"/>"
+    | Thinking ->
+      "<path d=\"M13.569 7.444C14.136 6.986 14.5 6.284 14.5 5.5C14.5 4.122 13.379 3 12 \
+       3H11.986C11.861 1.876 10.906 1 9.75 1C9.044 1 8.413 1.327 8 1.838C7.587 1.327 \
+       6.956 1 6.25 1C5.094 1 4.139 1.876 4.014 3H4C2.621 3 1.5 4.122 1.5 5.5C1.5 6.284 \
+       1.863 6.986 2.431 7.444C1.574 7.973 1 8.921 1 10C1 11.499 2.105 12.745 3.543 \
+       12.965C3.762 14.122 4.78 15 6 15C6.817 15 7.544 14.606 8 13.999C8.456 14.607 \
+       9.183 15 10 15C11.22 15 12.238 14.122 12.457 12.965C13.895 12.745 15 11.499 15 \
+       10C15 8.921 14.427 7.973 13.569 7.444ZM6 14C5.173 14 4.5 13.327 4.5 \
+       12.5V12H4C2.897 12 2 11.103 2 10C2 8.897 2.897 8 4 8H5V7H4C3.173 7 2.5 6.327 2.5 \
+       5.5C2.5 4.673 3.173 4 4 4H5V3.25C5 2.561 5.561 2 6.25 2C6.939 2 7.5 2.561 7.5 \
+       3.25V12.5C7.5 13.327 6.827 14 6 14ZM12 12H11.5V12.5C11.5 13.327 10.827 14 10 \
+       14C9.173 14 8.5 13.327 8.5 12.5V3.25C8.5 2.561 9.061 2 9.75 2C10.439 2 11 2.561 \
+       11 3.25V4H12C12.827 4 13.5 4.673 13.5 5.5C13.5 6.327 12.827 7 12 7H11V8H12C13.103 \
+       8 14 8.897 14 10C14 11.103 13.103 12 12 12Z\"/>"
     | Three_bars ->
       "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 5H2V3h12v2zm0 \
        4H2V7h12v2zM2 13h12v-2H2v2z\"/>"
@@ -5279,9 +5827,10 @@ module T = struct
        .153-.105.436.436 0 0 0 .1-.153.525.525 0 0 0 .036-.184.547.547 0 0 \
        0-.035-.184.436.436 0 0 0-.1-.153L9.4 10.016z\"/>"
     | Trash ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 3h3v1h-1v9l-1 \
-       1H4l-1-1V4H2V3h3V2a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1zM9 2H6v1h3V2zM4 \
-       13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z\"/>"
+      "<path d=\"M10 6H9V12H10V6Z\"/><path d=\"M7 6H6V12H7V6Z\"/><path d=\"M13 3H11V2C11 \
+       1.73478 10.8947 1.48038 10.7072 1.29285C10.5196 1.10531 10.2652 1 10 1L6 \
+       1C5.73478 1 5.48038 1.10531 5.29285 1.29285C5.10531 1.48038 5 1.73478 5 \
+       2V3H2V4H3V14L4 15H12L13 14V4H14V3H13ZM6 2H10V3H6V2ZM12 14H4V4H12V14Z\"/>"
     | Triangle_down ->
       "<path d=\"M2 5.56L2.413 5h11.194l.393.54L8.373 11h-.827L2 5.56z\"/>"
     | Triangle_left ->
@@ -5683,11 +6232,12 @@ module T = struct
        0 0-7.138 0zm9.8 2.522l-.034-.09H5.733l-.034.09a12.328 12.328 0 0 0-.766 4.335c0 \
        2.76.862 5.201 2.184 6.92 1.32 1.716 3.036 2.649 4.813 2.649 1.777 0 3.492-.933 \
        4.813-2.65 1.322-1.718 2.184-4.16 2.184-6.919 0-1.574-.28-3.044-.766-4.335z\"/>"
-    | Extensions ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.5 1.5L15 0h7.5L24 \
-       1.5V9l-1.5 1.5H15L13.5 9V1.5zm1.5 0V9h7.5V1.5H15zM0 15V6l1.5-1.5H9L10.5 \
-       6v7.5H18l1.5 1.5v7.5L18 24H1.5L0 22.5V15zm9-1.5V6H1.5v7.5H9zM9 \
-       15H1.5v7.5H9V15zm1.5 7.5H18V15h-7.5v7.5z\"/>"
+    | Extensions_large ->
+      "<path d=\"M22.281 6.96899L17.031 1.71899H15.9705L12.0015 5.68799V3.74849L11.2515 \
+       2.99849H2.25L1.5 3.74849V21.7485L2.25 22.4985H20.25L21 21.7485V12.7485L20.25 \
+       11.9985H18.3105L22.2795 8.02949V6.96899H22.281ZM3 4.49999H10.5V12H3V4.49999ZM3 \
+       13.5H10.5V21H3V13.5ZM19.5 21H12V13.5H19.5V21ZM12 12V9.31049L14.6895 12H12ZM16.5 \
+       11.6895L12.3105 7.49999L16.5 3.31049L20.6895 7.49999L16.5 11.6895Z\"/>"
     | Files ->
       "<path d=\"M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 \
        22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 \
@@ -5765,19 +6315,11 @@ module T = struct
        1.507L21 18.659l-.647.647zM15 17.246l1.506 1.507L15 20.259l.647.647 \
        2.153-2.153-2.153-2.153-.647.646z\"/>"
     | Search ->
-      "<path d=\"M15.25 0a8.25 8.25 0 0 0-6.18 13.72L1 22.88l1.12 1 8.05-9.12A8.251 \
-       8.251 0 1 0 15.25.01V0zm0 15a6.75 6.75 0 1 1 0-13.5 6.75 6.75 0 0 1 0 13.5z\"/>"
-    | Settings_gear ->
-      "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.85 \
-       8.75l4.15.83v4.84l-4.15.83 2.35 3.52-3.43 3.43-3.52-2.35-.83 \
-       4.15H9.58l-.83-4.15-3.52 2.35-3.43-3.43 2.35-3.52L0 14.42V9.58l4.15-.83L1.8 5.23 \
-       5.23 1.8l3.52 2.35L9.58 0h4.84l.83 4.15 3.52-2.35 3.43 3.43-2.35 3.52zm-1.57 \
-       5.07l4-.81v-2l-4-.81-.54-1.3 2.29-3.43-1.43-1.43-3.43 2.29-1.3-.54-.81-4h-2l-.81 \
-       4-1.3.54-3.43-2.29-1.43 1.43L6.38 8.9l-.54 1.3-4 .81v2l4 .81.54 1.3-2.29 3.43 \
-       1.43 1.43 3.43-2.29 1.3.54.81 4h2l.81-4 1.3-.54 3.43 2.29 \
-       1.43-1.43-2.29-3.43.54-1.3zm-8.186-4.672A3.43 3.43 0 0 1 12 8.57 3.44 3.44 0 0 1 \
-       15.43 12a3.43 3.43 0 1 1-5.336-2.852zm.956 4.274c.281.188.612.288.95.288A1.7 1.7 \
-       0 0 0 13.71 12a1.71 1.71 0 1 0-2.66 1.422z\"/>"
+      "<path d=\"M23.03 21.97L15.162 14.102C16.31 12.717 17 10.939 17 9C17 4.582 13.418 \
+       1 9 1C4.582 1 1 4.582 1 9C1 13.418 4.582 17 9 17C10.939 17 12.717 16.31 14.102 \
+       15.162L21.97 23.03L23.031 21.969L23.03 21.97ZM2.5 9C2.5 5.416 5.416 2.5 9 \
+       2.5C12.584 2.5 15.5 5.416 15.5 9C15.5 12.584 12.584 15.5 9 15.5C5.416 15.5 2.5 \
+       12.584 2.5 9Z\"/>"
     | Source_control ->
       "<path d=\"M21.007 8.222A3.738 3.738 0 0 0 15.045 5.2a3.737 3.737 0 0 0 1.156 \
        6.583 2.988 2.988 0 0 1-2.668 1.67h-2.99a4.456 4.456 0 0 0-2.989 1.165V7.4a3.737 \
@@ -5835,6 +6377,9 @@ module T = struct
     | Call_incoming
     | Call_outgoing
     | Case_sensitive
+    | Chat_sparkle_error
+    | Chat_sparkle_warning
+    | Chat_sparkle
     | Check_all
     | Check
     | Checklist
@@ -5866,8 +6411,10 @@ module T = struct
     | Code
     | Coffee
     | Collapse_all
+    | Collection
     | Color_mode
     | Combine
+    | Comment_discussion_sparkle
     | Comment_discussion
     | Comment_draft
     | Comment_unresolved
@@ -5876,7 +6423,11 @@ module T = struct
     | Compass_dot
     | Compass
     | Copilot_blocked
+    | Copilot_error
+    | Copilot_in_progress
     | Copilot_not_connected
+    | Copilot_snooze
+    | Copilot_success
     | Copilot_unavailable
     | Copilot_warning
     | Copilot
@@ -5927,6 +6478,7 @@ module T = struct
     | Diff
     | Discard
     | Edit_session
+    | Edit_sparkle
     | Edit
     | Editor_layout
     | Ellipsis
@@ -5936,6 +6488,7 @@ module T = struct
     | Exclude
     | Expand_all
     | Export
+    | Extensions
     | Eye_closed
     | Eye
     | Feedback
@@ -5970,6 +6523,7 @@ module T = struct
     | Git_merge
     | Git_pull_request_closed
     | Git_pull_request_create
+    | Git_pull_request_done
     | Git_pull_request_draft
     | Git_pull_request_go_to_changes
     | Git_pull_request_new_changes
@@ -6009,6 +6563,8 @@ module T = struct
     | Jersey
     | Json
     | Key
+    | Keyboard_tab_above
+    | Keyboard_tab_below
     | Keyboard_tab
     | Law
     | Layers_active
@@ -6019,13 +6575,16 @@ module T = struct
     | Layout_centered
     | Layout_menubar
     | Layout_panel_center
+    | Layout_panel_dock
     | Layout_panel_justify
     | Layout_panel_left
     | Layout_panel_off
     | Layout_panel_right
     | Layout_panel
+    | Layout_sidebar_left_dock
     | Layout_sidebar_left_off
     | Layout_sidebar_left
+    | Layout_sidebar_right_dock
     | Layout_sidebar_right_off
     | Layout_sidebar_right
     | Layout_statusbar
@@ -6068,6 +6627,7 @@ module T = struct
     | Multiple_windows
     | Music
     | Mute
+    | New_collection
     | New_file
     | New_folder
     | Newline
@@ -6140,11 +6700,14 @@ module T = struct
     | Screen_full
     | Screen_normal
     | Search_fuzzy
+    | Search_sparkle
     | Search_stop
+    | Send_to_remote_agent
     | Send
     | Server_environment
     | Server_process
     | Server
+    | Settings_gear
     | Settings
     | Share
     | Shield
@@ -6204,6 +6767,7 @@ module T = struct
     | Terminal_tmux
     | Terminal_ubuntu
     | Text_size
+    | Thinking
     | Three_bars
     | Thumbsdown_filled
     | Thumbsdown
@@ -6251,7 +6815,7 @@ module T = struct
     | Debug_alt
     | Debug_console
     | Debug
-    | Extensions
+    | Extensions_large
     | Files
     | Github_alt
     | Github
@@ -6260,7 +6824,6 @@ module T = struct
     | References
     | Remote_explorer
     | Search
-    | Settings_gear
     | Source_control
     | Terminal -> 24
   ;;
