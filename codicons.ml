@@ -66,3 +66,11 @@ let svg ?size ?color ?(extra_attrs = []) icon =
 ;;
 
 let all = Svg.all
+
+let to_byo_icon t =
+  Byo_icon.Expert.create
+    ~name:(name t)
+    ~svg_path:(Svg.svg t)
+    ~view_box_dimension:(frame t)
+    ~color_property:`Fill
+;;
