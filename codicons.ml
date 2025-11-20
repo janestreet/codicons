@@ -49,10 +49,10 @@ let svg ?size ?color ?(extra_attrs = []) icon =
         ; create "height" size
         ; create "viewBox" view_box
         ; create "fill" (Css_gen.Color.to_string_css color)
-        ; (* When using an icon inside a flexbox container, you almost certainly
-             want this so that the icon is not squished. *)
+        ; (* When using an icon inside a flexbox container, you almost certainly want this
+             so that the icon is not squished. *)
           Vdom.Attr.style (Css_gen.create ~field:"flex-shrink" ~value:"0")
-        ; (* Some icons are wiredly clipped by 1px it this is not set.  *)
+        ; (* Some icons are wiredly clipped by 1px it this is not set. *)
           Vdom.Attr.style (Css_gen.overflow `Visible)
         ; many extra_attrs
         ])
